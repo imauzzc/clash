@@ -191,29 +191,29 @@
       "region_choices": {
         "🇭🇰 香港节点": [
           "香港 HK 01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇨🇳 台湾节点": [
           "台湾 TW 01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇯🇵 日本节点": [
           "日本 JP 01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇸🇬 新加坡节点": [
           "新加坡 SG 01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇺🇲 美国节点": [
           "美国 US 01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🌍 欧洲节点": [
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01",
-          "♻️ 自动选择"
+          "REJECT"
         ]
       },
       "group_cycles": 0
@@ -267,22 +267,22 @@
       "region_choices": {
         "🇭🇰 香港节点": [
           "香港 HK 01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇨🇳 台湾节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇯🇵 日本节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇸🇬 新加坡节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇺🇲 美国节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🌍 欧洲节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ]
       },
       "group_cycles": 0
@@ -364,29 +364,29 @@
       "region_choices": {
         "🇭🇰 香港节点": [
           "HK-01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇨🇳 台湾节点": [
           "TW-01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇯🇵 日本节点": [
           "JP-01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇸🇬 新加坡节点": [
           "SG-01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇺🇲 美国节点": [
           "US-01",
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🌍 欧洲节点": [
           "NL-01",
           "DE-01",
           "UK-01",
-          "♻️ 自动选择"
+          "REJECT"
         ]
       },
       "group_cycles": 0
@@ -459,22 +459,22 @@
       "mihomo_exit": 0,
       "region_choices": {
         "🇭🇰 香港节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇨🇳 台湾节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇯🇵 日本节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇸🇬 新加坡节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🇺🇲 美国节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ],
         "🌍 欧洲节点": [
-          "♻️ 自动选择"
+          "REJECT"
         ]
       },
       "group_cycles": 0
@@ -511,7 +511,7 @@
   "regional_boundary_checks": 32,
   "regional_overlaps": 0,
   "expanded_duplicate_rules": 106,
-  "update": "six reusable regional select groups",
+  "update": "regional select groups exclude global automatic group; missing regions reject",
   "rule_lines_unchanged": true,
-  "base_commit": "ba0360384e4eddb77c30ba79be704b2a3bd59a65"
+  "base_commit": "d34a293bd038cb97efa028bc85aef4ec4f1ae979"
 }
