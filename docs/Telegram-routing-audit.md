@@ -2,7 +2,7 @@
 
 核验日期：2026-10-16（Asia/Taipei）。基础提交：ff74e1e0134183a2fce7b94607775bf886083928。
 
-本文保留 Telegram 分区及 14 / 20 / 26 组版本的审计过程。当前版本新增 LiminalNet 后为 27 组，最新范围和验证见文末“仓库精简与 LiminalNet”。Telegram-validation.json 保留新增前的 26 组快照。
+本文保留 Telegram 分区及 14 / 20 / 26 组版本的审计过程。当前版本为 27 组，LiminalNet 已扩展并更名为 Emby，最新范围和验证见文末“Emby 精选列表”。Telegram-validation.json 保留新增前的 26 组快照。
 
 ## 使用入口与范围
 
@@ -114,3 +114,18 @@ IPv6 用 IP-CIDR6,...,no-resolve，可由 Subconverter 正确转换并被 Mihomo
 - 复核原快照的 17 个 Telegram IP 案例和 7 个既有域名案例，目标组保持一致。移除唯一新增规则后，展开规则与基线完全相同；中英文地区订阅中的全部原有策略组与基线完全相同。
 
 以上为合成订阅、规则匹配和配置语法验证，没有使用真实机场订阅，未进行 liminalnet.us 实际连接或日本出口性能测试。客户端保存的已有选择可能覆盖初始默认，更新后需在 LiminalNet 中确认日本节点。
+
+## Emby 精选列表（2026-10-16）
+
+用户确认将 LiminalNet 扩展为 Emby 分流，并新增 `emby.edu.kg`。创建 `rules/Emby.list`，收录 8 条 DOMAIN-SUFFIX：用户提供的 `liminalnet.us`、`emby.edu.kg`，以及公开规则中的 `emby.nexitally.com`、`emby.flowercloud.yt`、`emby.ytoo.li`、`emby.nyancat.net`、`emby.prprcloud.com`、`emby.wtf`。六个公开地址核对自 blackmatrix7 Emby.list（完整来源见列表文件），仅作为地址参考，未验证服务可用性、注册或媒体播放。
+
+将原 `🌐 LiminalNet` 更名为 `🎬 Emby`，组内选项及顺序保持不变，初始默认仍为日本节点；INI 在原先 LiminalNet 规则的位置引用本仓库的新列表。列表仅匹配明确的服务器域名及其子域名，不使用宽泛关键词、进程规则、服务商主站、整个 edu.kg 后缀或共享 IP。README 和地区节点说明同步更新。Telegram 四份列表及证据、验证 JSON 均未修改。
+
+发布前复用同一批远程快照比较基线 90c2e96 和候选：22 份已发布列表均成功下载且非空，四份 Telegram 列表与线上一致；新增 Emby 列表使用本地文件，通过仅监听本机的 HTTP 服务供 Subconverter 读取，未将它表述为已发布 URL 验证。
+
+- 四种合成订阅（中英文地区节点、只有香港缺少日本、纯英文地区代码、地区正则反例）均经 Subconverter 0.9.0 转换，均为 27 组、8730 条规则，通过 Mihomo 1.19.32 配置检查。
+- 新组与原 LiminalNet 组除名称外完全相同，候选集合与苹果服务一致，第一项为日本节点；所有组非空、引用有效且无环。其余 26 个策略组与基线完全相同。缺少日本时不跨地区兜底。
+- 8 个根域名及各自的 `stream.` 子域名均首次匹配 Emby；16 个相似域名或外部后缀反例不匹配。额外检查 `nexitally.com`、`flowercloud.yt`、`edu.kg`、`emby.media`、`myemby.example.com` 均不进入 Emby。
+- 移除候选的 8 条 Emby 规则、移除基线的 1 条 LiminalNet 规则后，两者的其余规则完全一致。原 17 个 Telegram IP 案例和 7 个既有域名案例继续通过。
+
+以上为配置与路由匹配检查，没有使用真实机场订阅，未执行服务登录或媒体播放测试。播放跳转到其他域名时需按连接记录单独核对媒体地址。新组更名后请在客户端确认日本节点或按服务实际情况选择其他出口。
