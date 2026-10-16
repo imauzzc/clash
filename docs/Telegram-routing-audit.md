@@ -2,12 +2,14 @@
 
 核验日期：2026-10-16（Asia/Taipei）。基础提交：ff74e1e0134183a2fce7b94607775bf886083928。
 
+本文保留 Telegram 分区及 14 / 20 / 26 组版本的审计过程。当前版本新增 LiminalNet 后为 27 组，最新范围和验证见文末“仓库精简与 LiminalNet”。Telegram-validation.json 保留新增前的 26 组快照。
+
 ## 使用入口与范围
 
 MiSub 外部配置入口保持为：
 https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Custom.ini
 
-首轮修改此 INI，新增 rules/Telegram_{APAC,US,EU,Other}.list 及本审计材料；后续新增六个地区节点聚合组，见 Region-node-groups.md。仓库现有 Clash-mini.ini、Clash-Full.ini、Clash-LIAN.ini、Direct.list、AI.list 和两份路由器配置并非本 INI 的隐式依赖，不改动、不自动混入旧规则。不要把本次测试 YAML 当成真实订阅：节点是 192.0.2.1 的合成测试数据。
+首轮修改此 INI，新增 rules/Telegram_{APAC,US,EU,Other}.list 及本审计材料；后续新增六个地区节点聚合组，见 Region-node-groups.md。首轮审计时保留的 Clash-mini.ini、Clash-Full.ini、Clash-LIAN.ini、Direct.list、AI.list 和两份路由器配置并非本 INI 的隐式依赖，当时未改动，也未自动混入旧规则；这些旧文件已在后续仓库精简中移除。不要把本次测试 YAML 当成真实订阅：节点是 192.0.2.1 的合成测试数据。
 
 ## 基础配置审计
 
@@ -16,7 +18,7 @@ https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Cust
 - 语法为 [custom]、重复 ruleset / custom_proxy_group 键，不能用普通 INI 解析器合并同名键。内联规则 []DOMAIN 等及 []FINAL 经真正 Subconverter 验证。
 - 原 Telegram.list → 节点选择，现改为 3 个地区列表 → 官方快照/域名兜底 → ACL4SSR Telegram.list → 后续业务与通用规则。整个 Telegram 块位于 LAN 之后、Play/UnBan/广告/AI/Google/Proxy/China/GeoIP 之前，避免相关域名或大段 IP 抢先命中。
 - 保留原 Play 精确端点在 UnBan 前，尤其 dl.google.com 不被直连白名单抢走。广告规则仍优先于普通 AI/视频/Google 规则；这维持原方案的拦截取舍。
-- 当前 26 个组引用均有效，无循环；六个地区节点组按正则收集相应节点，同时可选择仅含本地区节点的自动测速子组，最后保留 REJECT 以保证非空并避免静默跨地区。3 个 TG 地区组分别默认引用新加坡、美国、欧洲节点组。无相应地区节点时地区组拒绝连接，不改走全局自动选择；无法保证空订阅或节点协议无法转换仍能生成。
+- 当时的 26 个组引用均有效，无循环；六个地区节点组按正则收集相应节点，同时可选择仅含本地区节点的自动测速子组，最后保留 REJECT 以保证非空并避免静默跨地区。3 个 TG 地区组分别默认引用新加坡、美国、欧洲节点组。无相应地区节点时地区组拒绝连接，不改走全局自动选择；无法保证空订阅或节点协议无法转换仍能生成。
 - 正则使用国家名及带字母边界的 SG/US/NL/DE/UK 等代码，避免 US 命中 RUSSIA/AUS。无法推断任意机场自定义名称的真实出口国，最终仍应人工检查。欧洲组涵盖荷兰、德国、英国、法国、芬兰等常见名称，不保证穷尽欧洲标签。
 - select 是手动选择：默认地区偏好，不提供地区内自动故障转移。TG兜底默认“🚀 节点选择”；通用组默认“♻️ 自动选择”，后者才是 url-test。没有匹配节点时的兜底不代表地区代理故障后自动切组。MiSub/Subconverter 保持 sort=false；OpenClash 已保存的选择可能覆盖更新后的初始默认。
 - 无重复远程 URL 或重复组定义。上游列表间的重叠仍在：转换 YAML 有 106 条“相同内容、相同目标”的多余重复；不同目标的相同条件也存在，例如 dl.google.com 的谷歌/UnBan 直连、Telegram 的分区/兜底/ProxyLite。按首次匹配生效，不能称完全去重。此次不复制整个 ACL4SSR 到仓库做破坏性全量去重，以保留上游更新；Telegram 区域内部/跨区域 CIDR 则无重叠。
@@ -97,3 +99,18 @@ IPv6 用 IP-CIDR6,...,no-resolve，可由 Subconverter 正确转换并被 Mihomo
 ## 本地区自动测速子组（2026-10-16）
 
 最新版本在六个地区手选组内各增加一个同地区 url-test 子组，共 26 组。用户主动选择地区自动测速后，按 300 秒周期、50 毫秒容差在该地区候选间测速选择；保留手选节点。自动组没有全局自动、其他地区或 DIRECT 候选，仅有本地区节点及 REJECT 占位。无本地区节点时拒绝连接；全部候选失效时不跨地区，也不保证已有连接无缝迁移。四种合成订阅均验证 26 组及同地区候选约束，Mihomo 配置检查通过。以上首轮及地区聚合章节中的 14/20 组数量是历史版本，当前操作说明以 Region-node-groups.md 为准。
+
+## 仓库精简与 LiminalNet（2026-10-16）
+
+按用户确认，将仓库集中为订阅转换规则库：保留今天新增或更新的主 INI、四份 Telegram 列表和四份文档，重写 README；删除根目录三个旧 INI、AI.list / Direct.list / Download.list / Proxy.list、Clash-Dev.txt 以及两份路由器配置，共 10 个旧文件。四份 Telegram 列表、Telegram 证据 JSON、既有验证 JSON 均保持原内容。旧文件仍可在 Git 历史中查看，引用旧 URL 的客户端需迁移到主 INI。
+
+新增 `🌐 LiminalNet` 手选策略组；选项集合与苹果服务完全一致，将 `🇯🇵 日本节点` 放在首位作为初始默认，其余选项保留原相对顺序。日本地区组内仍保留手选及同地区自动测速选择；没有日本节点时拒绝连接。新增一条 `DOMAIN-SUFFIX,liminalnet.us`，覆盖根域名和子域名，位于 LAN 后、其他远程列表前。原有 26 个策略组和原有规则顺序均未改变。
+
+发布前验证使用 Subconverter 0.9.0 和 Mihomo 1.19.32。INI 的 22 个真实远程列表全部成功下载且非空，四份仓库列表与线上内容一致；使用同一批远程快照分别转换基线和候选，避免上游更新干扰差异比较。候选 INI 及列表通过仅监听本机的 HTTP 服务供转换器读取。
+
+- 四种合成订阅：中英文地区节点（含两个日本节点）、仅香港缺少日本、纯英文地区代码、RUSSIA / AUS / JPG / TWO / HKT 反例；全部转换成功，均为 27 组、8723 条规则，全部通过 Mihomo 配置检查。
+- 新组初始首选日本节点，候选项与苹果服务完全相同；所有组非空、引用有效、无环。缺少日本及反例订阅下，日本自动测速仅剩 REJECT，日本手选组只含该自动组和 REJECT。
+- `liminalnet.us`、`www.liminalnet.us`、`api.deep.liminalnet.us` 首次匹配新组；`evilliminalnet.us`、`liminalnet.us.example.com` 不匹配该组。
+- 复核原快照的 17 个 Telegram IP 案例和 7 个既有域名案例，目标组保持一致。移除唯一新增规则后，展开规则与基线完全相同；中英文地区订阅中的全部原有策略组与基线完全相同。
+
+以上为合成订阅、规则匹配和配置语法验证，没有使用真实机场订阅，未进行 liminalnet.us 实际连接或日本出口性能测试。客户端保存的已有选择可能覆盖初始默认，更新后需在 LiminalNet 中确认日本节点。
