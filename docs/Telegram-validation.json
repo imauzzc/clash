@@ -115,7 +115,7 @@
   ],
   "scenarios": {
     "regions": {
-      "groups": 20,
+      "groups": 26,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
@@ -131,6 +131,8 @@
           "日本 JP 01",
           "新加坡 SG 01",
           "美国 US 01",
+          "美国 US 02",
+          "新加坡 SG 02",
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01"
@@ -148,6 +150,8 @@
           "日本 JP 01",
           "新加坡 SG 01",
           "美国 US 01",
+          "美国 US 02",
+          "新加坡 SG 02",
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01"
@@ -165,6 +169,8 @@
           "日本 JP 01",
           "新加坡 SG 01",
           "美国 US 01",
+          "美国 US 02",
+          "新加坡 SG 02",
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01"
@@ -182,6 +188,8 @@
           "日本 JP 01",
           "新加坡 SG 01",
           "美国 US 01",
+          "美国 US 02",
+          "新加坡 SG 02",
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01"
@@ -191,25 +199,63 @@
       "region_choices": {
         "🇭🇰 香港节点": [
           "香港 HK 01",
+          "🇭🇰 香港自动测速",
           "REJECT"
         ],
         "🇨🇳 台湾节点": [
           "台湾 TW 01",
+          "🇨🇳 台湾自动测速",
           "REJECT"
         ],
         "🇯🇵 日本节点": [
           "日本 JP 01",
+          "🇯🇵 日本自动测速",
           "REJECT"
         ],
         "🇸🇬 新加坡节点": [
           "新加坡 SG 01",
+          "新加坡 SG 02",
+          "🇸🇬 新加坡自动测速",
           "REJECT"
         ],
         "🇺🇲 美国节点": [
           "美国 US 01",
+          "美国 US 02",
+          "🇺🇲 美国自动测速",
           "REJECT"
         ],
         "🌍 欧洲节点": [
+          "荷兰 NL 01",
+          "德国 DE 01",
+          "英国 UK 01",
+          "🌍 欧洲自动测速",
+          "REJECT"
+        ]
+      },
+      "regional_auto_choices": {
+        "🇭🇰 香港自动测速": [
+          "香港 HK 01",
+          "REJECT"
+        ],
+        "🇨🇳 台湾自动测速": [
+          "台湾 TW 01",
+          "REJECT"
+        ],
+        "🇯🇵 日本自动测速": [
+          "日本 JP 01",
+          "REJECT"
+        ],
+        "🇸🇬 新加坡自动测速": [
+          "新加坡 SG 01",
+          "新加坡 SG 02",
+          "REJECT"
+        ],
+        "🇺🇲 美国自动测速": [
+          "美国 US 01",
+          "美国 US 02",
+          "REJECT"
+        ],
+        "🌍 欧洲自动测速": [
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01",
@@ -219,7 +265,7 @@
       "group_cycles": 0
     },
     "no_regions": {
-      "groups": 20,
+      "groups": 26,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
@@ -267,28 +313,55 @@
       "region_choices": {
         "🇭🇰 香港节点": [
           "香港 HK 01",
+          "🇭🇰 香港自动测速",
           "REJECT"
         ],
         "🇨🇳 台湾节点": [
+          "🇨🇳 台湾自动测速",
           "REJECT"
         ],
         "🇯🇵 日本节点": [
+          "🇯🇵 日本自动测速",
           "REJECT"
         ],
         "🇸🇬 新加坡节点": [
+          "🇸🇬 新加坡自动测速",
           "REJECT"
         ],
         "🇺🇲 美国节点": [
+          "🇺🇲 美国自动测速",
           "REJECT"
         ],
         "🌍 欧洲节点": [
+          "🌍 欧洲自动测速",
+          "REJECT"
+        ]
+      },
+      "regional_auto_choices": {
+        "🇭🇰 香港自动测速": [
+          "香港 HK 01",
+          "REJECT"
+        ],
+        "🇨🇳 台湾自动测速": [
+          "REJECT"
+        ],
+        "🇯🇵 日本自动测速": [
+          "REJECT"
+        ],
+        "🇸🇬 新加坡自动测速": [
+          "REJECT"
+        ],
+        "🇺🇲 美国自动测速": [
+          "REJECT"
+        ],
+        "🌍 欧洲自动测速": [
           "REJECT"
         ]
       },
       "group_cycles": 0
     },
     "english": {
-      "groups": 20,
+      "groups": 26,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
@@ -364,25 +437,59 @@
       "region_choices": {
         "🇭🇰 香港节点": [
           "HK-01",
+          "🇭🇰 香港自动测速",
           "REJECT"
         ],
         "🇨🇳 台湾节点": [
           "TW-01",
+          "🇨🇳 台湾自动测速",
           "REJECT"
         ],
         "🇯🇵 日本节点": [
           "JP-01",
+          "🇯🇵 日本自动测速",
           "REJECT"
         ],
         "🇸🇬 新加坡节点": [
           "SG-01",
+          "🇸🇬 新加坡自动测速",
           "REJECT"
         ],
         "🇺🇲 美国节点": [
           "US-01",
+          "🇺🇲 美国自动测速",
           "REJECT"
         ],
         "🌍 欧洲节点": [
+          "NL-01",
+          "DE-01",
+          "UK-01",
+          "🌍 欧洲自动测速",
+          "REJECT"
+        ]
+      },
+      "regional_auto_choices": {
+        "🇭🇰 香港自动测速": [
+          "HK-01",
+          "REJECT"
+        ],
+        "🇨🇳 台湾自动测速": [
+          "TW-01",
+          "REJECT"
+        ],
+        "🇯🇵 日本自动测速": [
+          "JP-01",
+          "REJECT"
+        ],
+        "🇸🇬 新加坡自动测速": [
+          "SG-01",
+          "REJECT"
+        ],
+        "🇺🇲 美国自动测速": [
+          "US-01",
+          "REJECT"
+        ],
+        "🌍 欧洲自动测速": [
           "NL-01",
           "DE-01",
           "UK-01",
@@ -392,7 +499,7 @@
       "group_cycles": 0
     },
     "negative": {
-      "groups": 20,
+      "groups": 26,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
@@ -459,21 +566,47 @@
       "mihomo_exit": 0,
       "region_choices": {
         "🇭🇰 香港节点": [
+          "🇭🇰 香港自动测速",
           "REJECT"
         ],
         "🇨🇳 台湾节点": [
+          "🇨🇳 台湾自动测速",
           "REJECT"
         ],
         "🇯🇵 日本节点": [
+          "🇯🇵 日本自动测速",
           "REJECT"
         ],
         "🇸🇬 新加坡节点": [
+          "🇸🇬 新加坡自动测速",
           "REJECT"
         ],
         "🇺🇲 美国节点": [
+          "🇺🇲 美国自动测速",
           "REJECT"
         ],
         "🌍 欧洲节点": [
+          "🌍 欧洲自动测速",
+          "REJECT"
+        ]
+      },
+      "regional_auto_choices": {
+        "🇭🇰 香港自动测速": [
+          "REJECT"
+        ],
+        "🇨🇳 台湾自动测速": [
+          "REJECT"
+        ],
+        "🇯🇵 日本自动测速": [
+          "REJECT"
+        ],
+        "🇸🇬 新加坡自动测速": [
+          "REJECT"
+        ],
+        "🇺🇲 美国自动测速": [
+          "REJECT"
+        ],
+        "🌍 欧洲自动测速": [
           "REJECT"
         ]
       },
@@ -511,7 +644,7 @@
   "regional_boundary_checks": 32,
   "regional_overlaps": 0,
   "expanded_duplicate_rules": 106,
-  "update": "regional select groups exclude global automatic group; missing regions reject",
+  "update": "six same-region url-test subgroups with manual selection preserved",
   "rule_lines_unchanged": true,
-  "base_commit": "d34a293bd038cb97efa028bc85aef4ec4f1ae979"
+  "base_commit": "2f907db510f077846b0f49eced43681d8c2d25a2"
 }
