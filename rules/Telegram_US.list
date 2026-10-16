@@ -1,0 +1,6 @@
+# Telegram US destination routing; reviewed 2026-10-16.
+# Evidence and limits: ../docs/Telegram-routing-audit.md
+# Location is inferred, not guaranteed. Keep these rules before Other and ACL4SSR.
+IP-CIDR,91.108.12.0/22,no-resolve
+IP-CIDR,149.154.172.0/22,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,no-resolve
