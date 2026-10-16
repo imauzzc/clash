@@ -115,152 +115,369 @@
   ],
   "scenarios": {
     "regions": {
-      "groups": 14,
+      "groups": 20,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
-          "新加坡 SG 01",
+          "🇸🇬 新加坡节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
           "香港 HK 01",
+          "台湾 TW 01",
+          "日本 JP 01",
+          "新加坡 SG 01",
           "美国 US 01",
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01"
         ],
         "📲 TG北美": [
-          "美国 US 01",
+          "🇺🇲 美国节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🌍 欧洲节点",
           "香港 HK 01",
+          "台湾 TW 01",
+          "日本 JP 01",
           "新加坡 SG 01",
+          "美国 US 01",
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01"
         ],
         "📲 TG欧洲": [
+          "🌍 欧洲节点",
+          "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
+          "香港 HK 01",
+          "台湾 TW 01",
+          "日本 JP 01",
+          "新加坡 SG 01",
+          "美国 US 01",
+          "荷兰 NL 01",
+          "德国 DE 01",
+          "英国 UK 01"
+        ],
+        "📲 TG兜底": [
+          "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
+          "香港 HK 01",
+          "台湾 TW 01",
+          "日本 JP 01",
+          "新加坡 SG 01",
+          "美国 US 01",
+          "荷兰 NL 01",
+          "德国 DE 01",
+          "英国 UK 01"
+        ]
+      },
+      "mihomo_exit": 0,
+      "region_choices": {
+        "🇭🇰 香港节点": [
+          "香港 HK 01",
+          "♻️ 自动选择"
+        ],
+        "🇨🇳 台湾节点": [
+          "台湾 TW 01",
+          "♻️ 自动选择"
+        ],
+        "🇯🇵 日本节点": [
+          "日本 JP 01",
+          "♻️ 自动选择"
+        ],
+        "🇸🇬 新加坡节点": [
+          "新加坡 SG 01",
+          "♻️ 自动选择"
+        ],
+        "🇺🇲 美国节点": [
+          "美国 US 01",
+          "♻️ 自动选择"
+        ],
+        "🌍 欧洲节点": [
           "荷兰 NL 01",
           "德国 DE 01",
           "英国 UK 01",
-          "🚀 节点选择",
-          "香港 HK 01",
-          "新加坡 SG 01",
-          "美国 US 01"
-        ],
-        "📲 TG兜底": [
-          "🚀 节点选择",
-          "📲 TG亚太",
-          "📲 TG北美",
-          "📲 TG欧洲",
-          "香港 HK 01",
-          "新加坡 SG 01",
-          "美国 US 01",
-          "荷兰 NL 01",
-          "德国 DE 01",
-          "英国 UK 01"
+          "♻️ 自动选择"
         ]
       },
-      "mihomo_exit": 0
+      "group_cycles": 0
     },
     "no_regions": {
-      "groups": 14,
+      "groups": 20,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
+          "🇸🇬 新加坡节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
           "香港 HK 01"
         ],
         "📲 TG北美": [
+          "🇺🇲 美国节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🌍 欧洲节点",
           "香港 HK 01"
         ],
         "📲 TG欧洲": [
+          "🌍 欧洲节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
           "香港 HK 01"
         ],
         "📲 TG兜底": [
           "🚀 节点选择",
-          "📲 TG亚太",
-          "📲 TG北美",
-          "📲 TG欧洲",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
           "香港 HK 01"
         ]
       },
-      "mihomo_exit": 0
+      "mihomo_exit": 0,
+      "region_choices": {
+        "🇭🇰 香港节点": [
+          "香港 HK 01",
+          "♻️ 自动选择"
+        ],
+        "🇨🇳 台湾节点": [
+          "♻️ 自动选择"
+        ],
+        "🇯🇵 日本节点": [
+          "♻️ 自动选择"
+        ],
+        "🇸🇬 新加坡节点": [
+          "♻️ 自动选择"
+        ],
+        "🇺🇲 美国节点": [
+          "♻️ 自动选择"
+        ],
+        "🌍 欧洲节点": [
+          "♻️ 自动选择"
+        ]
+      },
+      "group_cycles": 0
     },
     "english": {
-      "groups": 14,
+      "groups": 20,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
-          "SG-01",
+          "🇸🇬 新加坡节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
+          "HK-01",
+          "TW-01",
+          "JP-01",
+          "SG-01",
           "US-01",
           "NL-01",
           "DE-01",
           "UK-01"
         ],
         "📲 TG北美": [
-          "US-01",
+          "🇺🇲 美国节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🌍 欧洲节点",
+          "HK-01",
+          "TW-01",
+          "JP-01",
           "SG-01",
+          "US-01",
           "NL-01",
           "DE-01",
           "UK-01"
         ],
         "📲 TG欧洲": [
+          "🌍 欧洲节点",
+          "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
+          "HK-01",
+          "TW-01",
+          "JP-01",
+          "SG-01",
+          "US-01",
+          "NL-01",
+          "DE-01",
+          "UK-01"
+        ],
+        "📲 TG兜底": [
+          "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
+          "HK-01",
+          "TW-01",
+          "JP-01",
+          "SG-01",
+          "US-01",
+          "NL-01",
+          "DE-01",
+          "UK-01"
+        ]
+      },
+      "mihomo_exit": 0,
+      "region_choices": {
+        "🇭🇰 香港节点": [
+          "HK-01",
+          "♻️ 自动选择"
+        ],
+        "🇨🇳 台湾节点": [
+          "TW-01",
+          "♻️ 自动选择"
+        ],
+        "🇯🇵 日本节点": [
+          "JP-01",
+          "♻️ 自动选择"
+        ],
+        "🇸🇬 新加坡节点": [
+          "SG-01",
+          "♻️ 自动选择"
+        ],
+        "🇺🇲 美国节点": [
+          "US-01",
+          "♻️ 自动选择"
+        ],
+        "🌍 欧洲节点": [
           "NL-01",
           "DE-01",
           "UK-01",
-          "🚀 节点选择",
-          "SG-01",
-          "US-01"
-        ],
-        "📲 TG兜底": [
-          "🚀 节点选择",
-          "📲 TG亚太",
-          "📲 TG北美",
-          "📲 TG欧洲",
-          "SG-01",
-          "US-01",
-          "NL-01",
-          "DE-01",
-          "UK-01"
+          "♻️ 自动选择"
         ]
       },
-      "mihomo_exit": 0
+      "group_cycles": 0
     },
     "negative": {
-      "groups": 14,
+      "groups": 20,
       "rules": 8722,
       "tg_choices": {
         "📲 TG亚太": [
+          "🇸🇬 新加坡节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
           "RUSSIA-01",
           "AUS-01",
-          "HOST-01"
+          "HOST-01",
+          "JPG-01",
+          "TWO-01",
+          "HKT-01"
         ],
         "📲 TG北美": [
+          "🇺🇲 美国节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🌍 欧洲节点",
           "RUSSIA-01",
           "AUS-01",
-          "HOST-01"
+          "HOST-01",
+          "JPG-01",
+          "TWO-01",
+          "HKT-01"
         ],
         "📲 TG欧洲": [
+          "🌍 欧洲节点",
           "🚀 节点选择",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
           "RUSSIA-01",
           "AUS-01",
-          "HOST-01"
+          "HOST-01",
+          "JPG-01",
+          "TWO-01",
+          "HKT-01"
         ],
         "📲 TG兜底": [
           "🚀 节点选择",
-          "📲 TG亚太",
-          "📲 TG北美",
-          "📲 TG欧洲",
+          "🇭🇰 香港节点",
+          "🇨🇳 台湾节点",
+          "🇯🇵 日本节点",
+          "🇸🇬 新加坡节点",
+          "🇺🇲 美国节点",
+          "🌍 欧洲节点",
           "RUSSIA-01",
           "AUS-01",
-          "HOST-01"
+          "HOST-01",
+          "JPG-01",
+          "TWO-01",
+          "HKT-01"
         ]
       },
-      "mihomo_exit": 0
+      "mihomo_exit": 0,
+      "region_choices": {
+        "🇭🇰 香港节点": [
+          "♻️ 自动选择"
+        ],
+        "🇨🇳 台湾节点": [
+          "♻️ 自动选择"
+        ],
+        "🇯🇵 日本节点": [
+          "♻️ 自动选择"
+        ],
+        "🇸🇬 新加坡节点": [
+          "♻️ 自动选择"
+        ],
+        "🇺🇲 美国节点": [
+          "♻️ 自动选择"
+        ],
+        "🌍 欧洲节点": [
+          "♻️ 自动选择"
+        ]
+      },
+      "group_cycles": 0
     }
   },
   "ip_cases": {
@@ -294,285 +511,7 @@
   "regional_boundary_checks": 32,
   "regional_overlaps": 0,
   "expanded_duplicate_rules": 106,
-  "group_cycles": 0,
-  "unique_remote_urls": 22,
-  "original_remote_http_200": 18,
-  "raw_publication": {
-    "status": "success",
-    "commit": "944ce0e3df0d5395a3fa76e09abbae519cb3f538",
-    "branch": "main",
-    "files": [
-      {
-        "path": "config/ACL4SSR_Mini_AI_Custom.ini",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Custom.ini",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Custom.ini",
-        "sha256": "195248f688871fd2f550578607548e099140489b8a94570433f4a3c429b44fd3"
-      },
-      {
-        "path": "rules/Telegram_APAC.list",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_APAC.list",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_APAC.list",
-        "sha256": "a42e5c8fc724913c510e161e3a76865643ffd2fdcc8ba75d4d0689548edadd2a"
-      },
-      {
-        "path": "rules/Telegram_EU.list",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_EU.list",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_EU.list",
-        "sha256": "7fffadf8662c8f0bfdd5e53feaba6225a4d09c91b0b5c1728dd011fdf135a315"
-      },
-      {
-        "path": "rules/Telegram_Other.list",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_Other.list",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_Other.list",
-        "sha256": "c0c87b4237036a4d4b4704230b63f21913d252d26d9de1d0fd8b156802b56b53"
-      },
-      {
-        "path": "rules/Telegram_US.list",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_US.list",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_US.list",
-        "sha256": "d40dbd3d4f1bf653e31987997651a2ffa0f6ebdb6a40961daa74cd3e1513054d"
-      },
-      {
-        "path": "docs/Telegram-evidence-2026-10-16.json",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/docs/Telegram-evidence-2026-10-16.json",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/docs/Telegram-evidence-2026-10-16.json",
-        "sha256": "1ab9d7f0670a1cc96437686cd23732f05dd52245563542a90cb138884428e84c"
-      },
-      {
-        "path": "docs/Telegram-routing-audit.md",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/docs/Telegram-routing-audit.md",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/docs/Telegram-routing-audit.md",
-        "sha256": "bbb445cbbab729a4199fce59fe9236824a6d4504b1f5a52a67b3e6d88e202edd"
-      },
-      {
-        "path": "docs/Telegram-validation.json",
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/docs/Telegram-validation.json",
-        "status": 200,
-        "canonical_cache_stale": false,
-        "verified_url": "https://raw.githubusercontent.com/imauzzc/clash/main/docs/Telegram-validation.json",
-        "sha256": "9bf7a4b0c3a57b2d4c0e3ee71541929b4a90bd956d88517d43f1f8f0d3063180"
-      }
-    ],
-    "all_22_remote_rulesets": [
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
-        "status": 200,
-        "bytes": 1217
-      },
-      {
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_APAC.list",
-        "status": 200,
-        "bytes": 341
-      },
-      {
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_US.list",
-        "status": 200,
-        "bytes": 305
-      },
-      {
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_EU.list",
-        "status": 200,
-        "bytes": 515
-      },
-      {
-        "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Telegram_Other.list",
-        "status": 200,
-        "bytes": 945
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
-        "status": 200,
-        "bytes": 479
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
-        "status": 200,
-        "bytes": 1048
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
-        "status": 200,
-        "bytes": 15550
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
-        "status": 200,
-        "bytes": 32638
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list",
-        "status": 200,
-        "bytes": 138693
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list",
-        "status": 200,
-        "bytes": 1456
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list",
-        "status": 200,
-        "bytes": 418
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
-        "status": 200,
-        "bytes": 1614
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list",
-        "status": 200,
-        "bytes": 671
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list",
-        "status": 200,
-        "bytes": 1016
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
-        "status": 200,
-        "bytes": 2331
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list",
-        "status": 200,
-        "bytes": 922
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-        "status": 200,
-        "bytes": 497
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
-        "status": 200,
-        "bytes": 11502
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
-        "status": 200,
-        "bytes": 12615
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
-        "status": 200,
-        "bytes": 17251
-      },
-      {
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
-        "status": 200,
-        "bytes": 7257
-      }
-    ],
-    "live_published_conversion_matches_snapshots": true,
-    "live_mihomo_exit": 0
-  },
-  "upstream_snapshots": [
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
-      "status": 200,
-      "bytes": 1217
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
-      "status": 200,
-      "bytes": 1048
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
-      "status": 200,
-      "bytes": 15550
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
-      "status": 200,
-      "bytes": 32638
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list",
-      "status": 200,
-      "bytes": 138693
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list",
-      "status": 200,
-      "bytes": 1456
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list",
-      "status": 200,
-      "bytes": 418
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
-      "status": 200,
-      "bytes": 1614
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list",
-      "status": 200,
-      "bytes": 671
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list",
-      "status": 200,
-      "bytes": 1016
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
-      "status": 200,
-      "bytes": 2331
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list",
-      "status": 200,
-      "bytes": 922
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-      "status": 200,
-      "bytes": 497
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
-      "status": 200,
-      "bytes": 479
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
-      "status": 200,
-      "bytes": 11502
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
-      "status": 200,
-      "bytes": 12615
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
-      "status": 200,
-      "bytes": 17251
-    },
-    {
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
-      "status": 200,
-      "bytes": 7257
-    }
-  ],
-  "publication_validation_at_commit": "944ce0e3df0d5395a3fa76e09abbae519cb3f538"
+  "update": "six reusable regional select groups",
+  "rule_lines_unchanged": true,
+  "base_commit": "ba0360384e4eddb77c30ba79be704b2a3bd59a65"
 }

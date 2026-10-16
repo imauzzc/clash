@@ -7,7 +7,7 @@
 MiSub 外部配置入口保持为：
 https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Custom.ini
 
-本次只修改此 INI，新增 rules/Telegram_{APAC,US,EU,Other}.list 及本审计材料。仓库现有 Clash-mini.ini、Clash-Full.ini、Clash-LIAN.ini、Direct.list、AI.list 和两份路由器配置并非本 INI 的隐式依赖，不改动、不自动混入旧规则。不要把本次测试 YAML 当成真实订阅：节点是 192.0.2.1 的合成测试数据。
+首轮修改此 INI，新增 rules/Telegram_{APAC,US,EU,Other}.list 及本审计材料；后续新增六个地区节点聚合组，见 Region-node-groups.md。仓库现有 Clash-mini.ini、Clash-Full.ini、Clash-LIAN.ini、Direct.list、AI.list 和两份路由器配置并非本 INI 的隐式依赖，不改动、不自动混入旧规则。不要把本次测试 YAML 当成真实订阅：节点是 192.0.2.1 的合成测试数据。
 
 ## 基础配置审计
 
@@ -16,7 +16,7 @@ https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Cust
 - 语法为 [custom]、重复 ruleset / custom_proxy_group 键，不能用普通 INI 解析器合并同名键。内联规则 []DOMAIN 等及 []FINAL 经真正 Subconverter 验证。
 - 原 Telegram.list → 节点选择，现改为 3 个地区列表 → 官方快照/域名兜底 → ACL4SSR Telegram.list → 后续业务与通用规则。整个 Telegram 块位于 LAN 之后、Play/UnBan/广告/AI/Google/Proxy/China/GeoIP 之前，避免相关域名或大段 IP 抢先命中。
 - 保留原 Play 精确端点在 UnBan 前，尤其 dl.google.com 不被直连白名单抢走。广告规则仍优先于普通 AI/视频/Google 规则；这维持原方案的拦截取舍。
-- 14 个组引用均有效，无循环；3 个地区组先按正则加入偏好地区节点，再引用通用节点选择，再给出全部节点。无地区节点时默认通用组，保证有有效订阅节点的情况下不会空组；无法保证空订阅或节点协议无法转换仍能生成。
+- 当前 20 个组引用均有效，无循环；六个地区节点组按正则收集相应节点，最后引用全局自动选择以保证非空。3 个 TG 地区组分别默认引用新加坡、美国、欧洲节点组。无相应地区节点时经地区组回到全局自动选择，保证有有效订阅节点的情况下不会空组；无法保证空订阅或节点协议无法转换仍能生成。
 - 正则使用国家名及带字母边界的 SG/US/NL/DE/UK 等代码，避免 US 命中 RUSSIA/AUS。无法推断任意机场自定义名称的真实出口国，最终仍应人工检查。欧洲组涵盖荷兰、德国、英国、法国、芬兰等常见名称，不保证穷尽欧洲标签。
 - select 是手动选择：默认地区偏好，不提供地区内自动故障转移。TG兜底默认“🚀 节点选择”；通用组默认“♻️ 自动选择”，后者才是 url-test。没有匹配节点时的兜底不代表地区代理故障后自动切组。MiSub/Subconverter 保持 sort=false；OpenClash 已保存的选择可能覆盖更新后的初始默认。
 - 无重复远程 URL 或重复组定义。上游列表间的重叠仍在：转换 YAML 有 106 条“相同内容、相同目标”的多余重复；不同目标的相同条件也存在，例如 dl.google.com 的谷歌/UnBan 直连、Telegram 的分区/兜底/ProxyLite。按首次匹配生效，不能称完全去重。此次不复制整个 ACL4SSR 到仓库做破坏性全量去重，以保留上游更新；Telegram 区域内部/跨区域 CIDR 则无重叠。
@@ -62,11 +62,11 @@ IPv6 用 IP-CIDR6,...,no-resolve，可由 Subconverter 正确转换并被 Mihomo
 
 ## 验证与复测
 
-- 真正运行 Subconverter 0.9.0，四套合成订阅：中英文地区节点、仅香港无地区节点、纯英文代码节点、RUSSIA/AUS/HOST 反例。14 组、8722 条规则，各组非空、引用有效且默认顺序正确。
+- 真正运行 Subconverter 0.9.0，四套合成订阅：中英文地区节点、仅香港无地区节点、纯英文代码节点、RUSSIA/AUS/HOST 反例。首轮为 14 组，后续地区聚合版为 20 组；均为 8722 条规则，各组非空、引用有效且默认顺序正确。
 - 4 份未经修改的转换 YAML 均通过 Mihomo 1.19.32 -t；这是语法/配置验证，不代表合成节点能连接。
 - 对 16 条地区 CIDR 两端共 32 个边界、DC IPv4/IPv6、CDN/未知段兜底、Telegram 域名、Play/FCM/YouTube 首次匹配作断言。地区 CIDR 无重叠。
 - 上游 18 个 URL 以本次 HTTP 200 快照参加转换；新 4 个 URL 在发布前用相同文件的本地 HTTP 服务参加转换。在线 Raw 发布状态必须另行报告，不能把本地替换 URL 说成发布成功。
-- 路由器复测：刷新 MiSub 并更新订阅，确认 14 组、地区默认节点或手选出口；在连接详情检查 DC1/3、DC2/4、DC5 的 IP 和命中组；分别测消息、媒体上传下载、通话、IPv6；对比新加坡/美国/欧洲出口延迟、吞吐、丢包与稳定性。邻近服务器不保证代理线路最好，结果差时可随时手选其他出口。TG兜底通常保持通用节点选择。
+- 路由器复测：刷新 MiSub 并更新订阅，确认当前 20 组、地区默认节点或手选出口；在连接详情检查 DC1/3、DC2/4、DC5 的 IP 和命中组；分别测消息、媒体上传下载、通话、IPv6；对比新加坡/美国/欧洲出口延迟、吞吐、丢包与稳定性。邻近服务器不保证代理线路最好，结果差时可随时手选其他出口。TG兜底通常保持通用节点选择。
 
 ## 来源
 
@@ -85,3 +85,7 @@ IPv6 用 IP-CIDR6,...,no-resolve，可由 Subconverter 正确转换并被 Mihomo
 ## 发布后回读验证
 
 配置提交 944ce0e3df0d5395a3fa76e09abbae519cb3f538 已推送 main。8 个发布文件从 GitHub Raw 回读一致（忽略 Windows 工作文件换行差异）；INI 中全部 22 个远程列表均 HTTP 200。直接让 Subconverter 获取已发布 Raw INI 及其真实 Raw 列表后，生成的 8722 条规则和 14 个组与快照验证完全一致，且再次通过 Mihomo -t。验证仅使用合成节点，没有上传或使用真实机场订阅。详见 Telegram-validation.json。
+
+## 地区聚合补充（2026-10-16）
+
+新增香港、台湾、日本、新加坡、美国、欧洲六个可复用节点组。地区组内可手选本地区节点；最后的“♻️ 自动选择”是全局兜底，选择它可能跨地区。TG 三组默认分别引用新加坡、美国、欧洲节点组；通用、AI、YouTube、谷歌、苹果、微软、漏网及 TG 兜底均可选择地区组。所有 ruleset 行、四份 Telegram IP 列表保持不变。最新聚合版四套合成订阅均为 20 组，已通过 Subconverter 转换、Mihomo -t、非空组、引用无环和地区正则反例检查。初轮发布验证段记录的是当时的 14 组版本；最新结构及使用方法见 Region-node-groups.md。
