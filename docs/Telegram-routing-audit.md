@@ -81,3 +81,7 @@ IPv6 用 IP-CIDR6,...,no-resolve，可由 Subconverter 正确转换并被 Mihomo
 - Mihomo 运行版：https://github.com/MetaCubeX/mihomo/releases/tag/v1.19.32
 - RIPE RIS 查询模式：https://stat.ripe.net/data/prefix-overview/data.json?resource=91.108.58.0/23
 - RIPE 登记查询模式：https://stat.ripe.net/data/whois/data.json?resource=91.108.56.0/23
+
+## 发布后回读验证
+
+配置提交 944ce0e3df0d5395a3fa76e09abbae519cb3f538 已推送 main。8 个发布文件从 GitHub Raw 回读一致（忽略 Windows 工作文件换行差异）；INI 中全部 22 个远程列表均 HTTP 200。直接让 Subconverter 获取已发布 Raw INI 及其真实 Raw 列表后，生成的 8722 条规则和 14 个组与快照验证完全一致，且再次通过 Mihomo -t。验证仅使用合成节点，没有上传或使用真实机场订阅。详见 Telegram-validation.json。
