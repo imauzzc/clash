@@ -16,8 +16,10 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 
 ## 当前策略
 
-- 共 27 个策略组，包含节点选择、自动选择、六个地区手选组及各自的自动测速组。
-- AI、YouTube、谷歌、微软、苹果分别分流；微软和苹果默认直连。
+- 共 28 个策略组，包含节点选择、自动选择、六个地区手选组及各自的自动测速组。
+- Google Play、AI、YouTube、谷歌、微软、苹果分别分流；微软和苹果默认直连。
+- `🛍️ Google Play` 单独管理 Play 接口与下载，规则优先于直连白名单、广告、YouTube、通用谷歌及国内规则。初始选择为 `🚀 节点选择`，建议测试时直接选定一个已验证节点。`gvt1.com` 与 `dl.google.com` 也承载其他 Google 下载，因此这些下载会一并进入 Play 组。
+- 更新后须重新生成 MiSub / Subconverter 结果，再更新 OpenClash 订阅；必要时为外部 INI URL 添加版本参数以避开缓存。该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，未进入内核的流量不会命中 Play 组。新增策略组尚不代表已验证下载速度恢复。
 - `🎬 Emby` 引用本仓库 `rules/Emby.list`，覆盖收录的服务器域名及其子域名，默认选择 `🇯🇵 日本节点`。可选项与苹果服务一致：日本、直连、节点选择、自动选择、香港、台湾、新加坡、美国、欧洲。
 - Emby 规则位于局域网规则之后、其他远程列表之前，避免被后续通用规则提前匹配。
 - Telegram 根据目标 IP 分为亚太、北美、欧洲和兜底组；地区判断及实际效果存在边界，见审计说明。
@@ -71,4 +73,4 @@ INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保�
 - [Telegram 验证快照](docs/Telegram-validation.json)
 - [Telegram 分区证据](docs/Telegram-evidence-2026-10-16.json)
 
-Telegram 验证 JSON 保留加入 LiminalNet 前的 26 组历史快照；LiminalNet 后续更名为 Emby，当前仍为 27 组。此次修改的验证结果见审计说明末尾。
+Telegram 验证 JSON 保留加入 LiminalNet 前的 26 组历史快照；LiminalNet 后续更名为 Emby，加入 Google Play 后当前为 28 组。此次修改的验证结果见审计说明末尾。
