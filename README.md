@@ -1,5 +1,21 @@
 # Clash 订阅转换规则
 
+## 当前已验证内置方案的备用模板
+
+新增 [MiSub 稳定版备用配置](docs/MiSub_Stable_20261023.md)，以 2026-10-23 已确认可用的内置 Standard 为准：保留原 Google、DNS 和兜底逻辑，只含 Emby、统一 AI、Telegram 分区及三份广告清单。
+
+备用 URL：
+
+```text
+https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Stable_20261023.ini
+```
+
+配套提供 [DNS 片段](config/MiSub_Stable_20261023.dns.yaml)、完整分流快照、独立本地生成工具和配置比较记录。切换后仍需实际测试，INI 的隐藏组和地区识别限制见说明。当前网站的内置方案没有自动切换。
+
+下面保留的是早期 INI 的说明，不能把它的 Google/Play 等复杂规则当作稳定版配置。
+
+---
+
 维护供 MiSub / Subconverter 使用的自定义 INI，集中管理业务分流、地区节点和 Telegram 目标 IP 分区。
 
 ## 配置入口

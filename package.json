@@ -1,0 +1,12 @@
+{
+  "name": "personal-clash-stable-backup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:ini": "node scripts/build-stable-ini.mjs",
+    "render": "node scripts/render-stable.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "4.1.1"
+  }
+}

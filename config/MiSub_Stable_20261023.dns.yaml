@@ -1,0 +1,47 @@
+enable: true
+ipv6: false
+enhanced-mode: fake-ip
+fake-ip-range: 198.18.0.1/16
+fake-ip-filter-mode: blacklist
+fake-ip-filter:
+  - geosite:private
+  - geosite:category-ntp
+  - '*.lan'
+  - '*.local'
+  - localhost
+  - '*.arpa'
+use-hosts: true
+use-system-hosts: true
+respect-rules: true
+default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+nameserver:
+  - udp://8.8.8.8:53#🌐 DNS 出口
+  - udp://1.1.1.1:53#🌐 DNS 出口
+nameserver-policy:
+  geosite:private:
+    - 223.5.5.5
+    - 119.29.29.29
+  geosite:cn:
+    - 223.5.5.5
+    - 119.29.29.29
+  geosite:geolocation-!cn:
+    - udp://8.8.8.8:53#🌐 DNS 出口
+    - udp://1.1.1.1:53#🌐 DNS 出口
+proxy-server-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+direct-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+direct-nameserver-follow-policy: true
+fallback: []
+fallback-filter:
+  geoip: true
+  geoip-code: CN
+  ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+    - 127.0.0.0/8
+    - 100.64.0.0/10

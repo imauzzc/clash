@@ -1,0 +1,51 @@
+{
+  "sourceCommit": "d26abf6f8c43b323d64b4ec29814f7b3a2394a11",
+  "fixtures": [
+    {
+      "nodes": 18,
+      "fullRulesEqual": true,
+      "fullProvidersEqual": true,
+      "dnsEqual": true,
+      "nodeOutputEqual": true,
+      "fullGroupMembershipEqual": true,
+      "iniExpandedRulesEqual": true,
+      "iniGroups": 50,
+      "nativeGroups": 50
+    },
+    {
+      "nodes": 2,
+      "fullRulesEqual": true,
+      "fullProvidersEqual": true,
+      "dnsEqual": true,
+      "nodeOutputEqual": true,
+      "fullGroupMembershipEqual": true,
+      "iniExpandedRulesEqual": "covered by full fixture",
+      "iniGroups": 18,
+      "nativeGroups": 18
+    },
+    {
+      "nodes": 1,
+      "fullRulesEqual": true,
+      "fullProvidersEqual": true,
+      "dnsEqual": true,
+      "nodeOutputEqual": true,
+      "fullGroupMembershipEqual": true,
+      "iniExpandedRulesEqual": "covered by full fixture",
+      "iniGroups": 16,
+      "nativeGroups": 16
+    }
+  ],
+  "limitations": [
+    "INI cannot retain hidden flags or identical dynamic region membership; empty/unused regional groups may remain.",
+    "Region candidate ordering is frozen to snapshot order. Node metadata/regionOverrides require manual adjustment in backup.",
+    "Google Play download needs user testing after switching; current live MiSub settings were not changed."
+  ],
+  "mihomo": {
+    "version": "1.19.33",
+    "standaloneConfigurationTest": "passed",
+    "iniConfigurationTest": "passed",
+    "nativeRuleProvidersLoaded": 7,
+    "iniRuleProvidersLoaded": 11
+  },
+  "iniMetadataComparison": "ignores renderer internal metadata only"
+}
