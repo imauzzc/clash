@@ -1,0 +1,38 @@
+{
+  "repository": "MetaCubeX/meta-rules-dat",
+  "revision": "c8c1a27018377ec8a7f60c320efb3023681909eb",
+  "sources": [
+    {
+      "service": "openai",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/c8c1a27018377ec8a7f60c320efb3023681909eb/geo/geosite/openai.list",
+      "entries": 24
+    },
+    {
+      "service": "anthropic",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/c8c1a27018377ec8a7f60c320efb3023681909eb/geo/geosite/anthropic.list",
+      "entries": 19
+    },
+    {
+      "service": "google-gemini",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/c8c1a27018377ec8a7f60c320efb3023681909eb/geo/geosite/google-gemini.list",
+      "entries": 46
+    },
+    {
+      "service": "github-copilot",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/c8c1a27018377ec8a7f60c320efb3023681909eb/geo/geosite/github-copilot.list",
+      "entries": 6
+    },
+    {
+      "service": "xai",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/c8c1a27018377ec8a7f60c320efb3023681909eb/geo/geosite/xai.list",
+      "entries": 4
+    },
+    {
+      "service": "perplexity",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/c8c1a27018377ec8a7f60c320efb3023681909eb/geo/geosite/perplexity.list",
+      "entries": 5
+    }
+  ],
+  "uniqueRules": 104,
+  "conversion": "bare domain -> DOMAIN; +.domain -> DOMAIN-SUFFIX; no extra rules"
+}
