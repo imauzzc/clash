@@ -1,0 +1,395 @@
+{
+  "sourceCommit": "d26abf6f8c43b323d64b4ec29814f7b3a2394a11",
+  "groups": [
+    {
+      "name": "🌐 DNS 出口",
+      "type": "url-test",
+      "proxies": [],
+      "hidden": true,
+      "nodeFilter": ".*",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🚀 节点选择",
+      "type": "select",
+      "proxies": [
+        "♻️ 自动选择",
+        "🔯 故障转移",
+        "👋 手动切换",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇺🇸 美国节点",
+        "🌍 其他节点",
+        "🇪🇺 欧洲节点",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "♻️ 自动选择",
+      "type": "url-test",
+      "proxies": [],
+      "nodeFilter": ".*"
+    },
+    {
+      "name": "🔯 故障转移",
+      "type": "fallback",
+      "proxies": [],
+      "nodeFilter": ".*"
+    },
+    {
+      "name": "👋 手动切换",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": ".*"
+    },
+    {
+      "name": "🇭🇰 香港节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "(?:^|[^a-z])HK(?:$|[^a-z])|(?:^|[^a-z])HKG(?:$|[^a-z])|(?:^|[^a-z])HKT(?:$|[^a-z])|香港|Hong Kong|HongKong"
+    },
+    {
+      "name": "🇹🇼 台湾节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "(?:^|[^a-z])TW(?:$|[^a-z])|(?:^|[^a-z])TPE(?:$|[^a-z])|台湾|台北|Taiwan|Taipei"
+    },
+    {
+      "name": "🇯🇵 日本节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "(?:^|[^a-z])JP(?:$|[^a-z])|(?:^|[^a-z])JPN(?:$|[^a-z])|(?:^|[^a-z])NRT(?:$|[^a-z])|(?:^|[^a-z])HND(?:$|[^a-z])|(?:^|[^a-z])KIX(?:$|[^a-z])|(?:^|[^a-z])FUK(?:$|[^a-z])|东京|大阪|日本|Japan|Tokyo|Osaka|Fukuoka|Yokohama"
+    },
+    {
+      "name": "🇸🇬 狮城节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "(?:^|[^a-z])SG(?:$|[^a-z])|(?:^|[^a-z])SIN(?:$|[^a-z])|新加坡|Singapore"
+    },
+    {
+      "name": "🇺🇸 美国节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "(?:^|[^a-z])US(?:$|[^a-z])|(?:^|[^a-z])USA(?:$|[^a-z])|(?:^|[^a-z])LAX(?:$|[^a-z])|(?:^|[^a-z])SFO(?:$|[^a-z])|(?:^|[^a-z])SEA(?:$|[^a-z])|(?:^|[^a-z])JFK(?:$|[^a-z])|(?:^|[^a-z])NYC(?:$|[^a-z])|(?:^|[^a-z])ORD(?:$|[^a-z])|(?:^|[^a-z])DFW(?:$|[^a-z])|(?:^|[^a-z])IAD(?:$|[^a-z])|美国|United States|America|Los Angeles|New York|San Francisco|Seattle|Chicago|洛杉矶|纽约|旧金山|西雅图|芝加哥"
+    },
+    {
+      "name": "🇪🇺 欧洲节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "(?:^|[^a-z])DE(?:$|[^a-z])|(?:^|[^a-z])DEU(?:$|[^a-z])|(?:^|[^a-z])FRA(?:$|[^a-z])|(?:^|[^a-z])MUC(?:$|[^a-z])|德国|Germany|Frankfurt|Berlin|Munich|法兰克福|柏林|慕尼黑|(?:^|[^a-z])NL(?:$|[^a-z])|(?:^|[^a-z])NLD(?:$|[^a-z])|(?:^|[^a-z])AMS(?:$|[^a-z])|荷兰|Netherlands|Amsterdam|Rotterdam|阿姆斯特丹|鹿特丹|(?:^|[^a-z])UK(?:$|[^a-z])|(?:^|[^a-z])GB(?:$|[^a-z])|(?:^|[^a-z])LHR(?:$|[^a-z])|(?:^|[^a-z])LGW(?:$|[^a-z])|(?:^|[^a-z])LON(?:$|[^a-z])|英国|Britain|London|Manchester|伦敦|曼彻斯特|(?:^|[^a-z])FR(?:$|[^a-z])|(?:^|[^a-z])CDG(?:$|[^a-z])|(?:^|[^a-z])ORY(?:$|[^a-z])|法国|France|Paris|Lyon|Marseille|巴黎|里昂|马赛|(?:^|[^a-z])ES(?:$|[^a-z])|(?:^|[^a-z])ESP(?:$|[^a-z])|(?:^|[^a-z])MAD(?:$|[^a-z])|(?:^|[^a-z])BCN(?:$|[^a-z])|西班牙|Spain|Madrid|Barcelona|马德里|巴塞罗那|欧洲|Europe|🇪🇺|德国|🇩🇪|🇳🇱|🇬🇧|🇫🇷|🇪🇸|🇸🇪|🇫🇮|🇳🇴|🇩🇰|🇨🇭|🇦🇹|🇮🇹|🇮🇪|🇵🇱|🇵🇹|🇧🇪|🇨🇿|🇱🇺|🇮🇸|瑞典|Sweden|Stockholm|芬兰|Finland|Helsinki|挪威|Norway|Oslo|丹麦|Denmark|Copenhagen|瑞士|Switzerland|Zurich|奥地利|Austria|Vienna|意大利|Italy|Milan|爱尔兰|Ireland|Dublin|波兰|Poland|Warsaw|葡萄牙|Portugal|Lisbon|比利时|Belgium|Brussels|捷克|Czech|Prague|卢森堡|Luxembourg|冰岛|Iceland|Reykjavik|(?:^|[^a-z])(?:EU|SE|STO|FI|HEL|NO|OSL|DK|CPH|CH|ZRH|AT|VIE|IT|MIL|IE|DUB|PL|WAW|PT|LIS|BE|BRU|CZ|PRG|LU|IS|KEF)(?:$|[^a-z])"
+    },
+    {
+      "name": "🌍 其他节点",
+      "type": "select",
+      "proxies": [],
+      "nodeFilter": "^(?!.*(?:(?:^|[^a-z])HK(?:$|[^a-z])|(?:^|[^a-z])HKG(?:$|[^a-z])|(?:^|[^a-z])HKT(?:$|[^a-z])|香港|Hong Kong|HongKong|(?:^|[^a-z])TW(?:$|[^a-z])|(?:^|[^a-z])TPE(?:$|[^a-z])|台湾|台北|Taiwan|Taipei|(?:^|[^a-z])JP(?:$|[^a-z])|(?:^|[^a-z])JPN(?:$|[^a-z])|(?:^|[^a-z])NRT(?:$|[^a-z])|(?:^|[^a-z])HND(?:$|[^a-z])|(?:^|[^a-z])KIX(?:$|[^a-z])|(?:^|[^a-z])FUK(?:$|[^a-z])|东京|大阪|日本|Japan|Tokyo|Osaka|Fukuoka|Yokohama|(?:^|[^a-z])SG(?:$|[^a-z])|(?:^|[^a-z])SIN(?:$|[^a-z])|新加坡|Singapore|(?:^|[^a-z])US(?:$|[^a-z])|(?:^|[^a-z])USA(?:$|[^a-z])|(?:^|[^a-z])LAX(?:$|[^a-z])|(?:^|[^a-z])SFO(?:$|[^a-z])|(?:^|[^a-z])SEA(?:$|[^a-z])|(?:^|[^a-z])JFK(?:$|[^a-z])|(?:^|[^a-z])NYC(?:$|[^a-z])|(?:^|[^a-z])ORD(?:$|[^a-z])|(?:^|[^a-z])DFW(?:$|[^a-z])|(?:^|[^a-z])IAD(?:$|[^a-z])|美国|United States|America|Los Angeles|New York|San Francisco|Seattle|Chicago|洛杉矶|纽约|旧金山|西雅图|芝加哥|(?:^|[^a-z])DE(?:$|[^a-z])|(?:^|[^a-z])DEU(?:$|[^a-z])|(?:^|[^a-z])FRA(?:$|[^a-z])|(?:^|[^a-z])MUC(?:$|[^a-z])|德国|Germany|Frankfurt|Berlin|Munich|法兰克福|柏林|慕尼黑|(?:^|[^a-z])NL(?:$|[^a-z])|(?:^|[^a-z])NLD(?:$|[^a-z])|(?:^|[^a-z])AMS(?:$|[^a-z])|荷兰|Netherlands|Amsterdam|Rotterdam|阿姆斯特丹|鹿特丹|(?:^|[^a-z])UK(?:$|[^a-z])|(?:^|[^a-z])GB(?:$|[^a-z])|(?:^|[^a-z])LHR(?:$|[^a-z])|(?:^|[^a-z])LGW(?:$|[^a-z])|(?:^|[^a-z])LON(?:$|[^a-z])|英国|Britain|London|Manchester|伦敦|曼彻斯特|(?:^|[^a-z])FR(?:$|[^a-z])|(?:^|[^a-z])CDG(?:$|[^a-z])|(?:^|[^a-z])ORY(?:$|[^a-z])|法国|France|Paris|Lyon|Marseille|巴黎|里昂|马赛|(?:^|[^a-z])ES(?:$|[^a-z])|(?:^|[^a-z])ESP(?:$|[^a-z])|(?:^|[^a-z])MAD(?:$|[^a-z])|(?:^|[^a-z])BCN(?:$|[^a-z])|西班牙|Spain|Madrid|Barcelona|马德里|巴塞罗那|欧洲|Europe|🇪🇺|德国|🇩🇪|🇳🇱|🇬🇧|🇫🇷|🇪🇸|🇸🇪|🇫🇮|🇳🇴|🇩🇰|🇨🇭|🇦🇹|🇮🇹|🇮🇪|🇵🇱|🇵🇹|🇧🇪|🇨🇿|🇱🇺|🇮🇸|瑞典|Sweden|Stockholm|芬兰|Finland|Helsinki|挪威|Norway|Oslo|丹麦|Denmark|Copenhagen|瑞士|Switzerland|Zurich|奥地利|Austria|Vienna|意大利|Italy|Milan|爱尔兰|Ireland|Dublin|波兰|Poland|Warsaw|葡萄牙|Portugal|Lisbon|比利时|Belgium|Brussels|捷克|Czech|Prague|卢森堡|Luxembourg|冰岛|Iceland|Reykjavik|(?:^|[^a-z])(?:EU|SE|STO|FI|HEL|NO|OSL|DK|CPH|CH|ZRH|AT|VIE|IT|MIL|IE|DUB|PL|WAW|PT|LIS|BE|BRU|CZ|PRG|LU|IS|KEF)(?:$|[^a-z]))).*$"
+    },
+    {
+      "name": "🤖 智能 AI",
+      "type": "select",
+      "proxies": [
+        "🇺🇸 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "🇪🇺 欧洲节点",
+        "👋 手动切换"
+      ]
+    },
+    {
+      "name": "🎬 视频广告",
+      "type": "select",
+      "proxies": [
+        "REJECT",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "🎬 Emby",
+      "type": "select",
+      "proxies": [
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "♻️ 自动选择",
+        "👋 手动切换",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "🍎 Apple",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "♻️ 自动选择",
+        "👋 手动切换"
+      ]
+    },
+    {
+      "name": "Ⓜ️ Microsoft",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "♻️ 自动选择",
+        "👋 手动切换"
+      ]
+    },
+    {
+      "name": "📲 TG亚太",
+      "type": "select",
+      "proxies": [
+        "🇸🇬 狮城节点",
+        "♻️ 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🌍 其他节点",
+        "🇪🇺 欧洲节点",
+        "👋 手动切换"
+      ]
+    },
+    {
+      "name": "📲 TG北美",
+      "type": "select",
+      "proxies": [
+        "🇺🇸 美国节点",
+        "♻️ 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🌍 其他节点",
+        "🇪🇺 欧洲节点",
+        "👋 手动切换"
+      ]
+    },
+    {
+      "name": "📲 TG欧洲",
+      "type": "select",
+      "proxies": [
+        "🇪🇺 欧洲节点",
+        "♻️ 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇺🇸 美国节点",
+        "🌍 其他节点",
+        "👋 手动切换"
+      ]
+    },
+    {
+      "name": "📲 TG兜底",
+      "type": "select",
+      "proxies": [
+        "♻️ 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇺🇸 美国节点",
+        "🌍 其他节点",
+        "🇪🇺 欧洲节点",
+        "👋 手动切换"
+      ]
+    }
+  ],
+  "providers": {
+    "ADS": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/Providers/BanAD.yaml",
+      "path": "./ruleset/ADS.yaml",
+      "interval": 86400
+    },
+    "AI": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://raw.githubusercontent.com/imauzzc/clash/d649b5a17914df2d62b460add5fb72ce16904791/rules/compact/AI_MetaCubeX.list",
+      "path": "./ruleset/AI_Compact.list",
+      "interval": 86400
+    },
+    "APPLE": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/Providers/Ruleset/Apple.yaml",
+      "path": "./ruleset/APPLE.yaml",
+      "interval": 86400
+    },
+    "MICROSOFT": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/Providers/Ruleset/Microsoft.yaml",
+      "path": "./ruleset/MICROSOFT.yaml",
+      "interval": 86400
+    },
+    "ADS_PROGRAM": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/BanProgramAD.list",
+      "path": "./ruleset/ADS_PROGRAM.list",
+      "interval": 86400
+    },
+    "ADS_CHINA": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/BanEasyListChina.list",
+      "path": "./ruleset/ADS_CHINA.list",
+      "interval": 86400
+    },
+    "SOCIAL": {
+      "type": "http",
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/Providers/Ruleset/Telegram.yaml",
+      "path": "./ruleset/SOCIAL.yaml",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,ADS,🎬 视频广告",
+    "RULE-SET,ADS_PROGRAM,🎬 视频广告",
+    "RULE-SET,ADS_CHINA,🎬 视频广告",
+    "RULE-SET,AI,🤖 智能 AI",
+    "DOMAIN-SUFFIX,liminalnet.us,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.edu.kg,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.nexitally.com,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.flowercloud.yt,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.ytoo.li,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.nyancat.net,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.prprcloud.com,🎬 Emby",
+    "DOMAIN-SUFFIX,emby.wtf,🎬 Emby",
+    "IP-CIDR,91.108.16.0/22,📲 TG亚太,no-resolve",
+    "IP-CIDR,91.108.56.0/23,📲 TG亚太,no-resolve",
+    "IP-CIDR,149.154.168.0/22,📲 TG亚太,no-resolve",
+    "IP-CIDR6,2001:b28:f23f::/48,📲 TG亚太,no-resolve",
+    "IP-CIDR,91.108.12.0/22,📲 TG北美,no-resolve",
+    "IP-CIDR,149.154.172.0/22,📲 TG北美,no-resolve",
+    "IP-CIDR6,2001:b28:f23d::/48,📲 TG北美,no-resolve",
+    "IP-CIDR,91.108.4.0/22,📲 TG欧洲,no-resolve",
+    "IP-CIDR,91.108.8.0/22,📲 TG欧洲,no-resolve",
+    "IP-CIDR,91.108.58.0/23,📲 TG欧洲,no-resolve",
+    "IP-CIDR,149.154.160.0/21,📲 TG欧洲,no-resolve",
+    "IP-CIDR,95.161.76.100/32,📲 TG欧洲,no-resolve",
+    "IP-CIDR,91.105.192.0/23,📲 TG欧洲,no-resolve",
+    "IP-CIDR,185.76.151.0/24,📲 TG欧洲,no-resolve",
+    "IP-CIDR6,2001:67c:4e8::/48,📲 TG欧洲,no-resolve",
+    "IP-CIDR6,2a0a:f280:203::/48,📲 TG欧洲,no-resolve",
+    "IP-CIDR,91.108.56.0/22,📲 TG兜底,no-resolve",
+    "IP-CIDR,91.108.4.0/22,📲 TG兜底,no-resolve",
+    "IP-CIDR,91.108.8.0/22,📲 TG兜底,no-resolve",
+    "IP-CIDR,91.108.16.0/22,📲 TG兜底,no-resolve",
+    "IP-CIDR,91.108.12.0/22,📲 TG兜底,no-resolve",
+    "IP-CIDR,149.154.160.0/20,📲 TG兜底,no-resolve",
+    "IP-CIDR,91.105.192.0/23,📲 TG兜底,no-resolve",
+    "IP-CIDR,91.108.20.0/22,📲 TG兜底,no-resolve",
+    "IP-CIDR,185.76.151.0/24,📲 TG兜底,no-resolve",
+    "IP-CIDR6,2001:b28:f23d::/48,📲 TG兜底,no-resolve",
+    "IP-CIDR6,2001:b28:f23f::/48,📲 TG兜底,no-resolve",
+    "IP-CIDR6,2001:67c:4e8::/48,📲 TG兜底,no-resolve",
+    "IP-CIDR6,2001:b28:f23c::/48,📲 TG兜底,no-resolve",
+    "IP-CIDR6,2a0a:f280::/32,📲 TG兜底,no-resolve",
+    "DOMAIN-SUFFIX,t.me,📲 TG兜底",
+    "DOMAIN-SUFFIX,tdesktop.com,📲 TG兜底",
+    "DOMAIN-SUFFIX,telegra.ph,📲 TG兜底",
+    "DOMAIN-SUFFIX,telegram.me,📲 TG兜底",
+    "DOMAIN-SUFFIX,telegram.org,📲 TG兜底",
+    "DOMAIN-SUFFIX,telegram.dog,📲 TG兜底",
+    "DOMAIN-SUFFIX,telesco.pe,📲 TG兜底",
+    "DOMAIN-SUFFIX,tg.dev,📲 TG兜底",
+    "DOMAIN-SUFFIX,telegram-cdn.org,📲 TG兜底",
+    "RULE-SET,SOCIAL,📲 TG兜底",
+    "RULE-SET,APPLE,🍎 Apple",
+    "RULE-SET,MICROSOFT,Ⓜ️ Microsoft",
+    "DOMAIN-SUFFIX,google.com,🚀 节点选择",
+    "DOMAIN-SUFFIX,github.com,🚀 节点选择",
+    "GEOIP,CN,DIRECT",
+    "MATCH,🚀 节点选择"
+  ],
+  "dns": {
+    "enable": true,
+    "ipv6": false,
+    "enhanced-mode": "fake-ip",
+    "fake-ip-range": "198.18.0.1/16",
+    "fake-ip-filter-mode": "blacklist",
+    "fake-ip-filter": [
+      "geosite:private",
+      "geosite:category-ntp",
+      "*.lan",
+      "*.local",
+      "localhost",
+      "*.arpa"
+    ],
+    "use-hosts": true,
+    "use-system-hosts": true,
+    "respect-rules": true,
+    "default-nameserver": [
+      "223.5.5.5",
+      "119.29.29.29"
+    ],
+    "nameserver": [
+      "udp://8.8.8.8:53#🌐 DNS 出口",
+      "udp://1.1.1.1:53#🌐 DNS 出口"
+    ],
+    "nameserver-policy": {
+      "geosite:private": [
+        "223.5.5.5",
+        "119.29.29.29"
+      ],
+      "geosite:cn": [
+        "223.5.5.5",
+        "119.29.29.29"
+      ],
+      "geosite:geolocation-!cn": [
+        "udp://8.8.8.8:53#🌐 DNS 出口",
+        "udp://1.1.1.1:53#🌐 DNS 出口"
+      ]
+    },
+    "proxy-server-nameserver": [
+      "223.5.5.5",
+      "119.29.29.29"
+    ],
+    "direct-nameserver": [
+      "223.5.5.5",
+      "119.29.29.29"
+    ],
+    "direct-nameserver-follow-policy": true,
+    "fallback": [],
+    "fallback-filter": {
+      "geoip": true,
+      "geoip-code": "CN",
+      "ipcidr": [
+        "240.0.0.0/4",
+        "0.0.0.0/32",
+        "127.0.0.0/8",
+        "100.64.0.0/10"
+      ]
+    }
+  },
+  "supportedRegionNames": [
+    "香港",
+    "台湾",
+    "日本",
+    "新加坡",
+    "美国",
+    "欧洲",
+    "其他"
+  ],
+  "telegramFiles": {
+    "📲 TG亚太": "Telegram_APAC.list",
+    "📲 TG北美": "Telegram_US.list",
+    "📲 TG欧洲": "Telegram_EU.list",
+    "📲 TG兜底": "Telegram_Other.list"
+  },
+  "telegramRevision": "3a8c1c157244ab196e35d42e22d57271303e109d",
+  "variant": "compact",
+  "aiRevision": "c8c1a27018377ec8a7f60c320efb3023681909eb"
+}

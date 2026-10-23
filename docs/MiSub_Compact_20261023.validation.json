@@ -1,0 +1,151 @@
+{
+  "variant": "compact",
+  "aiRevision": "c8c1a27018377ec8a7f60c320efb3023681909eb",
+  "aiRuleCount": 104,
+  "nonAIRulesUnchanged": true,
+  "nonAIProvidersUnchanged": true,
+  "fixtures": [
+    {
+      "nodes": 17,
+      "groupReferencesValid": true,
+      "cycles": false,
+      "uniqueRegionMembership": true,
+      "iniRulesEqualFull": true,
+      "dnsUnchanged": true
+    },
+    {
+      "nodes": 2,
+      "groupReferencesValid": true,
+      "cycles": false,
+      "uniqueRegionMembership": true,
+      "iniRulesEqualFull": true,
+      "dnsUnchanged": true
+    },
+    {
+      "nodes": 1,
+      "groupReferencesValid": true,
+      "cycles": false,
+      "uniqueRegionMembership": true,
+      "iniRulesEqualFull": true,
+      "dnsUnchanged": true
+    },
+    {
+      "nodes": 1,
+      "groupReferencesValid": true,
+      "cycles": false,
+      "uniqueRegionMembership": true,
+      "iniRulesEqualFull": true,
+      "dnsUnchanged": true
+    },
+    {
+      "nodes": 1,
+      "groupReferencesValid": true,
+      "cycles": false,
+      "uniqueRegionMembership": true,
+      "iniRulesEqualFull": true,
+      "dnsUnchanged": true
+    }
+  ],
+  "limitations": [
+    "Actual Google Play and AI service access requires user OpenClash testing.",
+    "MetaCubeX six-service AI coverage differs from the native AI list; auxiliary domains remain where included upstream.",
+    "INI does not preserve hidden DNS group flags. Regions are recognized by node names."
+  ],
+  "mihomo": {
+    "version": "1.19.33",
+    "iniConfigTest": true,
+    "fullConfigTest": true,
+    "downloads": [
+      {
+        "name": "banad_0",
+        "rules": 595
+      },
+      {
+        "name": "banprogramad_1",
+        "rules": 1016
+      },
+      {
+        "name": "baneasylistchina_2",
+        "rules": 5056
+      },
+      {
+        "name": "ai_metacubex_3",
+        "rules": 104
+      },
+      {
+        "name": "telegram_apac_4",
+        "rules": 4
+      },
+      {
+        "name": "telegram_us_5",
+        "rules": 3
+      },
+      {
+        "name": "telegram_eu_6",
+        "rules": 9
+      },
+      {
+        "name": "telegram_other_7",
+        "rules": 23
+      },
+      {
+        "name": "telegram_8",
+        "rules": 17
+      },
+      {
+        "name": "apple_9",
+        "rules": 32
+      },
+      {
+        "name": "microsoft_10",
+        "rules": 82
+      }
+    ],
+    "coreProviders": [
+      {
+        "name": "ai_metacubex_3",
+        "count": 104
+      },
+      {
+        "name": "apple_9",
+        "count": 29
+      },
+      {
+        "name": "banad_0",
+        "count": 588
+      },
+      {
+        "name": "baneasylistchina_2",
+        "count": 5050
+      },
+      {
+        "name": "banprogramad_1",
+        "count": 1016
+      },
+      {
+        "name": "microsoft_10",
+        "count": 79
+      },
+      {
+        "name": "telegram_8",
+        "count": 14
+      },
+      {
+        "name": "telegram_apac_4",
+        "count": 4
+      },
+      {
+        "name": "telegram_eu_6",
+        "count": 9
+      },
+      {
+        "name": "telegram_other_7",
+        "count": 23
+      },
+      {
+        "name": "telegram_us_5",
+        "count": 3
+      }
+    ]
+  }
+}

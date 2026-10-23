@@ -1,5 +1,13 @@
 # Clash 订阅转换规则
 
+## 精简版（欧洲合并 + MetaCubeX AI）
+
+新增 [精简版说明](docs/MiSub_Compact_20261023.md)：保留六个地区及其他节点，欧洲只有一个组，AI 使用 MetaCubeX 六项服务清单。原稳定版保留回退。
+
+入口：https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_20261023.ini
+
+已通过配置和规则源加载校验，切换后仍需实际测试 Google Play 和 AI；没有自动切换网站设置。
+
 ## 当前已验证内置方案的备用模板
 
 新增 [MiSub 稳定版备用配置](docs/MiSub_Stable_20261023.md)，以 2026-10-23 已确认可用的内置 Standard 为准：保留原 Google、DNS 和兜底逻辑，只含 Emby、统一 AI、Telegram 分区及三份广告清单。

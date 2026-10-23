@@ -7,11 +7,11 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const snapshot=JSON.parse(fs.readFileSync(path.join(root,'docs/MiSub_Stable_20261023.snapshot.json'),'utf8'));
 
 /** Render from existing Clash nodes without relying on a particular MiSub version. */
-export function renderStable(input){
+export function renderStable(input, policy=snapshot){
     const config=structuredClone(input);
     if(!Array.isArray(config.proxies)||!config.proxies.length) throw new Error('Input must contain non-empty proxies.');
     const proxies=config.proxies.map(({metadata,...proxy})=>proxy);
-    const groups=snapshot.groups.map(({nodeFilter,...group})=>({
+    const groups=policy.groups.map(({nodeFilter,...group})=>({
         ...structuredClone(group),
         proxies:[...group.proxies,...(nodeFilter?proxies.filter(p=>new RegExp(nodeFilter,'i').test(p.name)).map(p=>p.name):[])],
     }));
@@ -29,8 +29,8 @@ export function renderStable(input){
     return {
         ...config,'mixed-port':7890,'allow-lan':false,'bind-address':'127.0.0.1',ipv6:false,
         mode:'rule','log-level':'info','external-controller':'127.0.0.1:9090',
-        dns:structuredClone(snapshot.dns),proxies,'proxy-groups':kept,
-        'rule-providers':structuredClone(snapshot.providers),rules:[...snapshot.rules],
+        dns:structuredClone(policy.dns),proxies,'proxy-groups':kept,
+        'rule-providers':structuredClone(policy.providers),rules:[...policy.rules],
     };
 }
 
