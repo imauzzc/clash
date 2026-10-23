@@ -1,0 +1,28 @@
+# Emby destination domains; curated 2026-10-16.
+# DOMAIN-SUFFIX matches the named domain and its subdomains only.
+# Scope: explicit server domains; no generic keywords, processes or shared IPs.
+# Public entries are routing references, not verified service availability.
+
+# User-provided servers.
+DOMAIN-SUFFIX,liminalnet.us
+DOMAIN-SUFFIX,emby.edu.kg
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-SUFFIX,mmcdn.com
+
+# Selected public entries, reviewed against the source below on 2026-10-16.
+# Source: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Emby/Emby.list
+# Source header last updated: 2025-06-06. Recheck addresses when actually used.
+# Nexitally
+DOMAIN-SUFFIX,emby.nexitally.com
+# FlowerCloud
+DOMAIN-SUFFIX,emby.flowercloud.yt
+# YToo
+DOMAIN-SUFFIX,emby.ytoo.li
+# Nyancat
+DOMAIN-SUFFIX,emby.nyancat.net
+# PrprCloud
+DOMAIN-SUFFIX,emby.prprcloud.com
+# Emby community server family
+DOMAIN-SUFFIX,emby.wtf

@@ -44,7 +44,7 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 - AI、YouTube、谷歌、微软、苹果分别分流；微软和苹果默认直连。
 - Play、Google CN 和 FCM 共用 `📢 谷歌`，不设置独立的 Play 或 Google CN 组；保留 Play 接口、下载域名和 GoogleCNProxyIP 覆盖。
 - 更新后须重新生成 MiSub / Subconverter 结果，再更新 OpenClash 订阅；必要时为外部 INI URL 添加版本参数以避开缓存。该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，未进入内核的流量不会命中这些分流规则。
-- `🎬 Emby` 引用本仓库 `rules/Emby.list`，覆盖收录的服务器域名及其子域名，默认选择 `🇯🇵 日本节点`。可选项与苹果服务一致：日本、直连、节点选择、自动选择、香港、台湾、新加坡、美国、欧洲。
+- `🎬 Emby` 引用本仓库 `rules/Emby_Custom_20261023.list`，覆盖收录的服务器域名及其子域名，默认选择 `🇯🇵 日本节点`。可选项与苹果服务一致：日本、直连、节点选择、自动选择、香港、台湾、新加坡、美国、欧洲。
 - Emby 规则位于局域网规则之后、其他远程列表之前，避免被后续通用规则提前匹配。
 - Telegram 根据目标 IP 分为亚太、北美、欧洲和兜底组；地区判断及实际效果存在边界，见审计说明。
 - 地区组保留手选节点；进入对应“自动测速”子组后才启用同地区自动选择。Emby 默认选日本地区组，不自动切到日本自动测速；需要时在日本组内主动选择。没有日本节点时拒绝连接，不跨地区兜底。
@@ -55,7 +55,7 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 
 ```text
 config/ACL4SSR_Mini_AI_Custom.ini  主配置，维护 ruleset 和 custom_proxy_group
-rules/Emby.list                   Emby 服务器域名精选列表
+rules/Emby_Custom_20261023.list                   Emby 服务器域名精选列表
 rules/Telegram_APAC.list          Telegram 亚太目标 IP
 rules/Telegram_US.list            Telegram 北美目标 IP
 rules/Telegram_EU.list            Telegram 欧洲目标 IP
@@ -63,7 +63,7 @@ rules/Telegram_Other.list         Telegram 广域网段及域名兜底
 docs/                            使用说明、分区证据及验证记录
 ```
 
-主配置引用本仓库的一份 Emby 列表和四份 Telegram 列表，其余远程规则由 ACL4SSR 提供。Emby 服务器地址统一在 `rules/Emby.list` 维护，新增服务器不需要修改 INI。
+主配置引用本仓库的一份 Emby 列表和四份 Telegram 列表，其余远程规则由 ACL4SSR 提供。Emby 服务器地址统一在 `rules/Emby_Custom_20261023.list` 维护，新增服务器不需要修改 INI。
 
 2026-10-16 清理了旧版 Full / LIAN / mini 模板、根目录四份旧列表、开发脚本和两份路由器设置示例；历史版本仍可从 Git 提交记录查看。使用过旧文件地址的客户端需要改用上述配置入口。
 

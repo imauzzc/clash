@@ -39,8 +39,8 @@ policy.providers.AI={type:'http',behavior:'classical',format:'text',
     path:'./ruleset/AI_Compact.list',interval:86400};
 // Keep the personal server list in one maintainable location, at its existing priority.
 policy.providers.EMBY={type:'http',behavior:'classical',format:'text',
-    url:'https://raw.githubusercontent.com/imauzzc/clash/main/rules/Emby.list',
-    path:'./ruleset/Emby.list',interval:86400};
+    url:'https://raw.githubusercontent.com/imauzzc/clash/main/rules/Emby_Custom_20261023.list',
+    path:'./ruleset/Emby_Custom_20261023.list',interval:86400};
 let embyInserted=false;
 policy.rules=policy.rules.flatMap(rule=>{
     if(rule.split(',')[2]!=='🎬 Emby')return [rule];

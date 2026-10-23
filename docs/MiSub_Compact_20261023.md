@@ -14,7 +14,7 @@ https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_202610
 - 地区仅保留香港、台湾、日本、新加坡、美国、欧洲及其他。欧洲合并德国、荷兰、英国、法国、西班牙，并识别常见北欧、中欧节点名称；未识别的节点仍可从其他或手动切换选择。俄罗斯、土耳其暂归其他，避免地理跨区歧义。没有节点的地区可由当前 MiSub 清理。
 - 每个地区只有一个手选组，不再生成各国的自动测速子组；全局自动选择、故障转移仍保留。Telegram 欧洲出口首选改为欧洲组。
 - AI 使用 MetaCubeX 的 openai、anthropic、google-gemini、github-copilot、xai、perplexity 六项清单，共 104 条，全部指向同一个“🤖 智能 AI”。默认候选顺序为美国、日本、新加坡、台湾、欧洲、手动切换。出口能否使用服务须实测。
-- Emby 统一引用仓库的 `rules/Emby.list`，当前与原内联 8 个域名完全一致，规则位置不变。以后只需增删该文件中的服务器域名，客户端刷新规则源后生效，无需修改 INI。此清单跟随 main 分支维护。
+- Emby 统一引用仓库的 `rules/Emby_Custom_20261023.list`，当前保留用户更新后的 12 条域名规则，规则位置不变。以后只需增删该文件中的服务器域名，客户端刷新规则源后生效，无需修改 INI。此清单跟随 main 分支维护。
 - AI 匹配置于原 AI 位置，保持广告优先以及后面的通用 Google、Apple、Microsoft、GEOIP CN、MATCH 顺序。除 AI 变更和 Emby 外置以外，DNS、规则和既有规则源保持稳定版内容。
 
 ## AI 来源与兼容方式
@@ -48,3 +48,7 @@ YouTube 来源与转换记录见 `MiSub_Compact_20261023.youtube-source.json`，
 ## 其他规则源建议
 
 暂不一起迁移。MetaCubeX Apple、Microsoft 清单覆盖范围明显大于当前 ACL4SSR 快照，替换会改变大量流量走向，应在有具体漏匹配时单独测试。MetaCubeX category-ads-all 是另一套广告域名集合，不等价于 BanAD、BanProgramAD、BanEasyListChina，不能只按条数判断强弱或直接替掉三份清单。Telegram 通用域名清单不能代替现有 IP 分区；Emby 继续维护个人服务器域名；Google/Play 与 DNS 保留当前稳定逻辑。
+
+## Emby 清单地址更新
+
+2026-10-23 将当前个人清单入口改为 `rules/Emby_Custom_20261023.list`，绕过旧文件地址的镜像缓存。规则内容保留用户已添加的全部 12 条，组名和优先级不变。旧 Emby.list 暂留兼容历史订阅；后续请编辑新文件。更新订阅后，在规则提供者页面检查 emby_custom_20261023 对应清单为 12 条。MiSub 项目保持上游版本。

@@ -273,8 +273,8 @@
       "type": "http",
       "behavior": "classical",
       "format": "text",
-      "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Emby.list",
-      "path": "./ruleset/Emby.list",
+      "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Emby_Custom_20261023.list",
+      "path": "./ruleset/Emby_Custom_20261023.list",
       "interval": 86400
     },
     "YOUTUBE": {
