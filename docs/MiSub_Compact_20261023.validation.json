@@ -2,10 +2,12 @@
   "variant": "compact",
   "aiRevision": "c8c1a27018377ec8a7f60c320efb3023681909eb",
   "aiRuleCount": 104,
+  "youtubeRevision": "c8c1a27018377ec8a7f60c320efb3023681909eb",
+  "youtubeRuleCount": 178,
   "embyRuleCount": 8,
   "embyExpandedContentAndPriorityUnchanged": true,
-  "nonAIExpandedRulesUnchanged": true,
-  "existingNonAIProvidersUnchanged": true,
+  "otherExpandedRulesUnchanged": true,
+  "existingProvidersUnchanged": true,
   "fixtures": [
     {
       "nodes": 17,
@@ -49,7 +51,7 @@
     }
   ],
   "limitations": [
-    "Actual Google Play and AI service access requires user OpenClash testing.",
+    "Actual Google Play, YouTube and AI service access requires user OpenClash testing.",
     "MetaCubeX six-service AI coverage differs from the native AI list; auxiliary domains remain where included upstream.",
     "INI does not preserve hidden DNS group flags. Regions are recognized by node names.",
     "Emby references the main branch personal list; later list edits apply on provider refresh."
@@ -57,7 +59,6 @@
   "mihomo": {
     "version": "1.19.33",
     "iniConfigTest": true,
-    "fullConfigTest": true,
     "downloads": [
       {
         "name": "banad_0",
@@ -76,35 +77,39 @@
         "rules": 104
       },
       {
-        "name": "emby_4",
+        "name": "youtube_metacubex_4",
+        "rules": 178
+      },
+      {
+        "name": "emby_5",
         "rules": 8
       },
       {
-        "name": "telegram_apac_5",
+        "name": "telegram_apac_6",
         "rules": 4
       },
       {
-        "name": "telegram_us_6",
+        "name": "telegram_us_7",
         "rules": 3
       },
       {
-        "name": "telegram_eu_7",
+        "name": "telegram_eu_8",
         "rules": 9
       },
       {
-        "name": "telegram_other_8",
+        "name": "telegram_other_9",
         "rules": 23
       },
       {
-        "name": "telegram_9",
+        "name": "telegram_10",
         "rules": 17
       },
       {
-        "name": "apple_10",
+        "name": "apple_11",
         "rules": 32
       },
       {
-        "name": "microsoft_11",
+        "name": "microsoft_12",
         "rules": 82
       }
     ],
@@ -114,7 +119,7 @@
         "count": 104
       },
       {
-        "name": "apple_10",
+        "name": "apple_11",
         "count": 29
       },
       {
@@ -130,33 +135,121 @@
         "count": 1016
       },
       {
-        "name": "emby_4",
+        "name": "emby_5",
         "count": 8
       },
       {
-        "name": "microsoft_11",
+        "name": "microsoft_12",
         "count": 79
       },
       {
-        "name": "telegram_9",
+        "name": "telegram_10",
         "count": 14
       },
       {
-        "name": "telegram_apac_5",
+        "name": "telegram_apac_6",
         "count": 4
       },
       {
-        "name": "telegram_eu_7",
+        "name": "telegram_eu_8",
         "count": 9
       },
       {
-        "name": "telegram_other_8",
+        "name": "telegram_other_9",
         "count": 23
       },
       {
-        "name": "telegram_us_6",
+        "name": "telegram_us_7",
         "count": 3
+      },
+      {
+        "name": "youtube_metacubex_4",
+        "count": 178
       }
     ]
+  },
+  "onlyYouTubeChangedFromPreviousCompact": true,
+  "native": {
+    "parityFixtures": 5,
+    "testsPassed": 983,
+    "functionsBuild": true,
+    "mihomo": {
+      "downloads": [
+        {
+          "name": "ADS",
+          "rules": 595
+        },
+        {
+          "name": "AI",
+          "rules": 104
+        },
+        {
+          "name": "APPLE",
+          "rules": 32
+        },
+        {
+          "name": "MICROSOFT",
+          "rules": 82
+        },
+        {
+          "name": "ADS_PROGRAM",
+          "rules": 1016
+        },
+        {
+          "name": "ADS_CHINA",
+          "rules": 5050
+        },
+        {
+          "name": "SOCIAL",
+          "rules": 17
+        },
+        {
+          "name": "EMBY",
+          "rules": 8
+        },
+        {
+          "name": "YOUTUBE",
+          "rules": 178
+        }
+      ],
+      "coreProviders": [
+        {
+          "name": "ADS",
+          "count": 588
+        },
+        {
+          "name": "ADS_CHINA",
+          "count": 5050
+        },
+        {
+          "name": "ADS_PROGRAM",
+          "count": 1016
+        },
+        {
+          "name": "AI",
+          "count": 104
+        },
+        {
+          "name": "APPLE",
+          "count": 29
+        },
+        {
+          "name": "EMBY",
+          "count": 8
+        },
+        {
+          "name": "MICROSOFT",
+          "count": 79
+        },
+        {
+          "name": "SOCIAL",
+          "count": 14
+        },
+        {
+          "name": "YOUTUBE",
+          "count": 178
+        }
+      ]
+    }
   }
 }

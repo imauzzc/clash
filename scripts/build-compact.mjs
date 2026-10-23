@@ -48,6 +48,16 @@ policy.rules=policy.rules.flatMap(rule=>{
     embyInserted=true;
     return ['RULE-SET,EMBY,🎬 Emby'];
 });
+const youtubeSource=JSON.parse(fs.readFileSync(path.join(root,'docs/MiSub_Compact_20261023.youtube-source.json'),'utf8'));
+policy.youtubeRevision=youtubeSource.revision;
+policy.providers.YOUTUBE={type:'http',behavior:'classical',format:'text',
+    url:'https://raw.githubusercontent.com/imauzzc/clash/8afaa2aea298a7bc346be40f639138d72fe403c1/rules/compact/YouTube_MetaCubeX.list',
+    path:'./ruleset/YouTube_MetaCubeX.list',interval:86400};
+policy.rules.splice(policy.rules.indexOf('RULE-SET,AI,🤖 智能 AI')+1,0,'RULE-SET,YOUTUBE,📺 YouTube');
+policy.groups.splice(policy.groups.findIndex(g=>g.name==='🎬 Emby'),0,{
+    name:'📺 YouTube',type:'select',
+    proxies:['♻️ 自动选择','🔯 故障转移',...regionGroups.map(g=>g.name),'👋 手动切换'],
+});
 policy.supportedRegionNames=['香港','台湾','日本','新加坡','美国','欧洲','其他'];
 policy.variant='compact';
 policy.aiRevision=revision;

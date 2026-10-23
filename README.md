@@ -2,7 +2,7 @@
 
 ## 精简版（欧洲合并 + MetaCubeX AI）
 
-新增 [精简版说明](docs/MiSub_Compact_20261023.md)：保留六个地区及其他节点，欧洲只有一个组，AI 使用 MetaCubeX 六项服务清单。原稳定版保留回退。
+新增 [精简版说明](docs/MiSub_Compact_20261023.md)：保留六个地区及其他节点，欧洲只有一个组，AI 使用 MetaCubeX 六项服务清单。暂定加入 MetaCubeX YouTube 清单和独立出口；原稳定版保留回退。
 
 入口：https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_20261023.ini
 

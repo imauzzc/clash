@@ -10,6 +10,7 @@ https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_202610
 
 ## 本次变化
 
+- 暂定增加“📺 YouTube”独立出口，使用 MetaCubeX youtube 的固定快照 178 条规则，放在 AI 之后、通用 Google 和 CN 直连之前。默认自动选择，可改选地区或具体节点。该清单只负责分流，不用于去除视频广告。没有匹配整个 gvt1.com、google.com 或 googleapis.com。
 - 地区仅保留香港、台湾、日本、新加坡、美国、欧洲及其他。欧洲合并德国、荷兰、英国、法国、西班牙，并识别常见北欧、中欧节点名称；未识别的节点仍可从其他或手动切换选择。俄罗斯、土耳其暂归其他，避免地理跨区歧义。没有节点的地区可由当前 MiSub 清理。
 - 每个地区只有一个手选组，不再生成各国的自动测速子组；全局自动选择、故障转移仍保留。Telegram 欧洲出口首选改为欧洲组。
 - AI 使用 MetaCubeX 的 openai、anthropic、google-gemini、github-copilot、xai、perplexity 六项清单，共 104 条，全部指向同一个“🤖 智能 AI”。默认候选顺序为美国、日本、新加坡、台湾、欧洲、手动切换。出口能否使用服务须实测。
@@ -31,7 +32,7 @@ MiSub 当前自定义 INI 将外部 `.list` 作为 classical 读取，无法直�
 3. 更新 OpenClash 配置，检查 AI 出口、TG 各分区出口及广告组选择。缺少对应分区节点时，当前独立生成器对 TG 分区使用 REJECT 保护，需手动指定合适出口。
 4. 实测 Google Play 下载、ChatGPT/Claude/Gemini、Emby 和 Telegram。配置校验与模拟节点测试无法替代实际网络测试。
 
-已验证五种节点组合，INI 展开后的规则与完整生成器一致，Emby 外置前后内容和优先级一致，地区成员归类及组引用正常，Mihomo 配置检查通过且 12 个远程规则源全部加载。详见 validation.json。INI 仍不能携带隐藏 DNS 组标记，节点地区识别依赖名称。
+已验证五种节点组合，INI 展开后的规则与完整生成器一致，Emby 外置前后内容和优先级一致，地区成员归类及组引用正常，Mihomo 配置检查通过且 13 个远程规则源全部加载。详见 validation.json。INI 仍不能携带隐藏 DNS 组标记，节点地区识别依赖名称。
 
 本地独立生成完整配置：
 
@@ -41,6 +42,8 @@ node scripts/render-compact.mjs nodes.yaml output.yaml
 ```
 
 本地生成不会上传节点。输出含节点凭据，不要发布到仓库。重建精简模板使用 `node scripts/build-compact.mjs`，原稳定版工具仍可使用。
+
+YouTube 来源与转换记录见 `MiSub_Compact_20261023.youtube-source.json`，重建清单使用 `node scripts/build-meta-youtube.mjs`。原始 MetaCubeX domain 格式按与 AI 相同的方式转换成 classical，匹配含义不变，INI 和 MiSub 内置 Standard 引用相同的固定清单。修改版本后需要显式同步两个仓库；本次没有添加定时更新。
 
 ## 其他规则源建议
 
