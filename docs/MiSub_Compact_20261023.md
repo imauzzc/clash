@@ -13,7 +13,8 @@ https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_202610
 - 地区仅保留香港、台湾、日本、新加坡、美国、欧洲及其他。欧洲合并德国、荷兰、英国、法国、西班牙，并识别常见北欧、中欧节点名称；未识别的节点仍可从其他或手动切换选择。俄罗斯、土耳其暂归其他，避免地理跨区歧义。没有节点的地区可由当前 MiSub 清理。
 - 每个地区只有一个手选组，不再生成各国的自动测速子组；全局自动选择、故障转移仍保留。Telegram 欧洲出口首选改为欧洲组。
 - AI 使用 MetaCubeX 的 openai、anthropic、google-gemini、github-copilot、xai、perplexity 六项清单，共 104 条，全部指向同一个“🤖 智能 AI”。默认候选顺序为美国、日本、新加坡、台湾、欧洲、手动切换。出口能否使用服务须实测。
-- AI 匹配置于原 AI 位置，保持广告优先以及后面的通用 Google、Apple、Microsoft、GEOIP CN、MATCH 顺序。DNS、非 AI 规则和规则源保持稳定版内容。
+- Emby 统一引用仓库的 `rules/Emby.list`，当前与原内联 8 个域名完全一致，规则位置不变。以后只需增删该文件中的服务器域名，客户端刷新规则源后生效，无需修改 INI。此清单跟随 main 分支维护。
+- AI 匹配置于原 AI 位置，保持广告优先以及后面的通用 Google、Apple、Microsoft、GEOIP CN、MATCH 顺序。除 AI 变更和 Emby 外置以外，DNS、规则和既有规则源保持稳定版内容。
 
 ## AI 来源与兼容方式
 
@@ -30,7 +31,7 @@ MiSub 当前自定义 INI 将外部 `.list` 作为 classical 读取，无法直�
 3. 更新 OpenClash 配置，检查 AI 出口、TG 各分区出口及广告组选择。缺少对应分区节点时，当前独立生成器对 TG 分区使用 REJECT 保护，需手动指定合适出口。
 4. 实测 Google Play 下载、ChatGPT/Claude/Gemini、Emby 和 Telegram。配置校验与模拟节点测试无法替代实际网络测试。
 
-已验证五种节点组合，INI 展开后的规则与完整生成器一致，地区成员归类及组引用正常，Mihomo 配置检查通过且 11 个远程规则源全部加载。详见 validation.json。INI 仍不能携带隐藏 DNS 组标记，节点地区识别依赖名称。
+已验证五种节点组合，INI 展开后的规则与完整生成器一致，Emby 外置前后内容和优先级一致，地区成员归类及组引用正常，Mihomo 配置检查通过且 12 个远程规则源全部加载。详见 validation.json。INI 仍不能携带隐藏 DNS 组标记，节点地区识别依赖名称。
 
 本地独立生成完整配置：
 

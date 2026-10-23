@@ -252,6 +252,14 @@
       "url": "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@433381ebc4b1de59350fa8bed2a04a888228f801/Clash/Providers/Ruleset/Telegram.yaml",
       "path": "./ruleset/SOCIAL.yaml",
       "interval": 86400
+    },
+    "EMBY": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://raw.githubusercontent.com/imauzzc/clash/main/rules/Emby.list",
+      "path": "./ruleset/Emby.list",
+      "interval": 86400
     }
   },
   "rules": [
@@ -259,14 +267,7 @@
     "RULE-SET,ADS_PROGRAM,🎬 视频广告",
     "RULE-SET,ADS_CHINA,🎬 视频广告",
     "RULE-SET,AI,🤖 智能 AI",
-    "DOMAIN-SUFFIX,liminalnet.us,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.edu.kg,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.nexitally.com,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.flowercloud.yt,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.ytoo.li,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.nyancat.net,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.prprcloud.com,🎬 Emby",
-    "DOMAIN-SUFFIX,emby.wtf,🎬 Emby",
+    "RULE-SET,EMBY,🎬 Emby",
     "IP-CIDR,91.108.16.0/22,📲 TG亚太,no-resolve",
     "IP-CIDR,91.108.56.0/23,📲 TG亚太,no-resolve",
     "IP-CIDR,149.154.168.0/22,📲 TG亚太,no-resolve",

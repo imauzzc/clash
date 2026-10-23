@@ -37,6 +37,17 @@ const revision=aiSources.revision;
 policy.providers.AI={type:'http',behavior:'classical',format:'text',
     url:'https://raw.githubusercontent.com/imauzzc/clash/d649b5a17914df2d62b460add5fb72ce16904791/rules/compact/AI_MetaCubeX.list',
     path:'./ruleset/AI_Compact.list',interval:86400};
+// Keep the personal server list in one maintainable location, at its existing priority.
+policy.providers.EMBY={type:'http',behavior:'classical',format:'text',
+    url:'https://raw.githubusercontent.com/imauzzc/clash/main/rules/Emby.list',
+    path:'./ruleset/Emby.list',interval:86400};
+let embyInserted=false;
+policy.rules=policy.rules.flatMap(rule=>{
+    if(rule.split(',')[2]!=='🎬 Emby')return [rule];
+    if(embyInserted)return [];
+    embyInserted=true;
+    return ['RULE-SET,EMBY,🎬 Emby'];
+});
 policy.supportedRegionNames=['香港','台湾','日本','新加坡','美国','欧洲','其他'];
 policy.variant='compact';
 policy.aiRevision=revision;
