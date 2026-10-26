@@ -24,6 +24,7 @@ policy.groups=base.groups.filter(g=>!regional.includes(g)&&!g.name.startsWith('�
 const insert=policy.groups.findIndex(g=>g.name==='🤖 智能 AI');
 policy.groups.splice(insert,0,...regionGroups);
 policy.groups.find(g=>g.name==='🤖 智能 AI').proxies=['🇺🇸 美国节点','🇯🇵 日本节点','🇸🇬 狮城节点','🇹🇼 台湾节点',europe,'👋 手动切换'];
+policy.groups.find(g=>g.name==='🎬 Emby').proxies.splice(1,0,'🇺🇸 美国节点');
 // Replace all old AI matches at their original priority, before general Google and CN.
 let inserted=false;
 policy.rules=base.rules.flatMap(rule=>{
