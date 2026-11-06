@@ -39,4 +39,14 @@ if __name__ == "__main__":
         (out / f"{name}.json").write_text(
             json.dumps(convert(ROOT / source), ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8", newline="\n")
+    # Union preserves first occurrence and leaves APAC/US precedence to routing order.
+    merged = {}
+    for name in ("telegram_eu", "telegram_other"):
+        for rule in convert(ROOT / SOURCES[name])["rules"]:
+            for kind, values in rule.items():
+                target = merged.setdefault(kind, [])
+                target.extend(value for value in values if value not in target)
+    (out / "telegram_eu_other.json").write_text(
+        json.dumps({"version": 3, "rules": [{k: v} for k, v in merged.items()]},
+                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
