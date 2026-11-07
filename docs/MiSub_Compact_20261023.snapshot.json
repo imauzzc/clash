@@ -24,7 +24,6 @@
         "🇸🇬 狮城节点",
         "🇺🇸 美国节点",
         "🌍 其他节点",
-        "🇪🇺 欧洲节点",
         "DIRECT"
       ]
     },
@@ -77,12 +76,6 @@
       "nodeFilter": "(?:^|[^a-z])US(?:$|[^a-z])|(?:^|[^a-z])USA(?:$|[^a-z])|(?:^|[^a-z])LAX(?:$|[^a-z])|(?:^|[^a-z])SFO(?:$|[^a-z])|(?:^|[^a-z])SEA(?:$|[^a-z])|(?:^|[^a-z])JFK(?:$|[^a-z])|(?:^|[^a-z])NYC(?:$|[^a-z])|(?:^|[^a-z])ORD(?:$|[^a-z])|(?:^|[^a-z])DFW(?:$|[^a-z])|(?:^|[^a-z])IAD(?:$|[^a-z])|美国|United States|America|Los Angeles|New York|San Francisco|Seattle|Chicago|洛杉矶|纽约|旧金山|西雅图|芝加哥"
     },
     {
-      "name": "🇪🇺 欧洲节点",
-      "type": "select",
-      "proxies": [],
-      "nodeFilter": "(?:^|[^a-z])DE(?:$|[^a-z])|(?:^|[^a-z])DEU(?:$|[^a-z])|(?:^|[^a-z])FRA(?:$|[^a-z])|(?:^|[^a-z])MUC(?:$|[^a-z])|德国|Germany|Frankfurt|Berlin|Munich|法兰克福|柏林|慕尼黑|(?:^|[^a-z])NL(?:$|[^a-z])|(?:^|[^a-z])NLD(?:$|[^a-z])|(?:^|[^a-z])AMS(?:$|[^a-z])|荷兰|Netherlands|Amsterdam|Rotterdam|阿姆斯特丹|鹿特丹|(?:^|[^a-z])UK(?:$|[^a-z])|(?:^|[^a-z])GB(?:$|[^a-z])|(?:^|[^a-z])LHR(?:$|[^a-z])|(?:^|[^a-z])LGW(?:$|[^a-z])|(?:^|[^a-z])LON(?:$|[^a-z])|英国|Britain|London|Manchester|伦敦|曼彻斯特|(?:^|[^a-z])FR(?:$|[^a-z])|(?:^|[^a-z])CDG(?:$|[^a-z])|(?:^|[^a-z])ORY(?:$|[^a-z])|法国|France|Paris|Lyon|Marseille|巴黎|里昂|马赛|(?:^|[^a-z])ES(?:$|[^a-z])|(?:^|[^a-z])ESP(?:$|[^a-z])|(?:^|[^a-z])MAD(?:$|[^a-z])|(?:^|[^a-z])BCN(?:$|[^a-z])|西班牙|Spain|Madrid|Barcelona|马德里|巴塞罗那|欧洲|Europe|🇪🇺|德国|🇩🇪|🇳🇱|🇬🇧|🇫🇷|🇪🇸|🇸🇪|🇫🇮|🇳🇴|🇩🇰|🇨🇭|🇦🇹|🇮🇹|🇮🇪|🇵🇱|🇵🇹|🇧🇪|🇨🇿|🇱🇺|🇮🇸|瑞典|Sweden|Stockholm|芬兰|Finland|Helsinki|挪威|Norway|Oslo|丹麦|Denmark|Copenhagen|瑞士|Switzerland|Zurich|奥地利|Austria|Vienna|意大利|Italy|Milan|爱尔兰|Ireland|Dublin|波兰|Poland|Warsaw|葡萄牙|Portugal|Lisbon|比利时|Belgium|Brussels|捷克|Czech|Prague|卢森堡|Luxembourg|冰岛|Iceland|Reykjavik|(?:^|[^a-z])(?:EU|SE|STO|FI|HEL|NO|OSL|DK|CPH|CH|ZRH|AT|VIE|IT|MIL|IE|DUB|PL|WAW|PT|LIS|BE|BRU|CZ|PRG|LU|IS|KEF)(?:$|[^a-z])"
-    },
-    {
       "name": "🌍 其他节点",
       "type": "select",
       "proxies": [],
@@ -96,7 +89,6 @@
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇹🇼 台湾节点",
-        "🇪🇺 欧洲节点",
         "👋 手动切换"
       ]
     },
@@ -119,7 +111,6 @@
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇺🇸 美国节点",
-        "🇪🇺 欧洲节点",
         "🌍 其他节点",
         "👋 手动切换"
       ]
@@ -167,7 +158,6 @@
         "🇯🇵 日本节点",
         "🇺🇸 美国节点",
         "🌍 其他节点",
-        "🇪🇺 欧洲节点",
         "👋 手动切换"
       ]
     },
@@ -181,22 +171,6 @@
         "🇹🇼 台湾节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
-        "🌍 其他节点",
-        "🇪🇺 欧洲节点",
-        "👋 手动切换"
-      ]
-    },
-    {
-      "name": "📲 TG欧洲",
-      "type": "select",
-      "proxies": [
-        "🇪🇺 欧洲节点",
-        "♻️ 自动选择",
-        "🇭🇰 香港节点",
-        "🇹🇼 台湾节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
-        "🇺🇸 美国节点",
         "🌍 其他节点",
         "👋 手动切换"
       ]
@@ -212,7 +186,6 @@
         "🇸🇬 狮城节点",
         "🇺🇸 美国节点",
         "🌍 其他节点",
-        "🇪🇺 欧洲节点",
         "👋 手动切换"
       ]
     }
@@ -301,15 +274,6 @@
     "IP-CIDR,91.108.12.0/22,📲 TG北美,no-resolve",
     "IP-CIDR,149.154.172.0/22,📲 TG北美,no-resolve",
     "IP-CIDR6,2001:b28:f23d::/48,📲 TG北美,no-resolve",
-    "IP-CIDR,91.108.4.0/22,📲 TG欧洲,no-resolve",
-    "IP-CIDR,91.108.8.0/22,📲 TG欧洲,no-resolve",
-    "IP-CIDR,91.108.58.0/23,📲 TG欧洲,no-resolve",
-    "IP-CIDR,149.154.160.0/21,📲 TG欧洲,no-resolve",
-    "IP-CIDR,95.161.76.100/32,📲 TG欧洲,no-resolve",
-    "IP-CIDR,91.105.192.0/23,📲 TG欧洲,no-resolve",
-    "IP-CIDR,185.76.151.0/24,📲 TG欧洲,no-resolve",
-    "IP-CIDR6,2001:67c:4e8::/48,📲 TG欧洲,no-resolve",
-    "IP-CIDR6,2a0a:f280:203::/48,📲 TG欧洲,no-resolve",
     "IP-CIDR,91.108.56.0/22,📲 TG兜底,no-resolve",
     "IP-CIDR,91.108.4.0/22,📲 TG兜底,no-resolve",
     "IP-CIDR,91.108.8.0/22,📲 TG兜底,no-resolve",
@@ -407,13 +371,11 @@
     "日本",
     "新加坡",
     "美国",
-    "欧洲",
     "其他"
   ],
   "telegramFiles": {
     "📲 TG亚太": "Telegram_APAC.list",
     "📲 TG北美": "Telegram_US.list",
-    "📲 TG欧洲": "Telegram_EU.list",
     "📲 TG兜底": "Telegram_Other.list"
   },
   "telegramRevision": "3a8c1c157244ab196e35d42e22d57271303e109d",
