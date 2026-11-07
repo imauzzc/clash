@@ -2,7 +2,7 @@
 
 ## 精简版（欧洲合并 + MetaCubeX AI）
 
-新增 [精简版说明](docs/MiSub_Compact_20261023.md)：保留六个地区及其他节点，欧洲只有一个组，AI 使用 MetaCubeX 六项服务清单。暂定加入 MetaCubeX YouTube 清单和独立出口；原稳定版保留回退。
+新增 [精简版说明](docs/MiSub_Compact_20261023.md)：保留五个地区及其他节点，欧洲只有一个组，AI 使用 MetaCubeX 六项服务清单。暂定加入 MetaCubeX YouTube 清单和独立出口；原稳定版保留回退。
 
 入口：https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_20261023.ini
 
@@ -40,7 +40,7 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 
 ## 当前策略
 
-- 共 27 个策略组，包含节点选择、自动选择、六个地区手选组及各自的自动测速组。
+- 共 27 个策略组，包含节点选择、自动选择、五个地区手选组及各自的自动测速组。
 - AI、YouTube、谷歌、微软、苹果分别分流；微软和苹果默认直连。
 - Play、Google CN 和 FCM 共用 `📢 谷歌`，不设置独立的 Play 或 Google CN 组；保留 Play 接口、下载域名和 GoogleCNProxyIP 覆盖。
 - 更新后须重新生成 MiSub / Subconverter 结果，再更新 OpenClash 订阅；必要时为外部 INI URL 添加版本参数以避开缓存。该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，未进入内核的流量不会命中这些分流规则。
