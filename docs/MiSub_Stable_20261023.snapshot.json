@@ -320,32 +320,6 @@
       ]
     },
     {
-      "name": "📲 TG欧洲",
-      "type": "select",
-      "proxies": [
-        "🇩🇪 德国节点",
-        "♻️ 自动选择",
-        "🇭🇰 香港节点",
-        "🇹🇼 台湾节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
-        "🇺🇸 美国节点",
-        "🇰🇷 韩国节点",
-        "🇳🇱 荷兰节点",
-        "🇬🇧 英国节点",
-        "🇫🇷 法国节点",
-        "🇨🇦 加拿大节点",
-        "🇦🇺 澳洲节点",
-        "🇧🇷 巴西节点",
-        "🇪🇸 西班牙节点",
-        "🇷🇺 俄国节点",
-        "🇮🇳 印度节点",
-        "🇹🇷 土耳其节点",
-        "🌍 其他节点",
-        "👋 手动切换"
-      ]
-    },
-    {
       "name": "📲 TG兜底",
       "type": "select",
       "proxies": [
@@ -659,15 +633,6 @@
     "IP-CIDR,91.108.12.0/22,📲 TG北美,no-resolve",
     "IP-CIDR,149.154.172.0/22,📲 TG北美,no-resolve",
     "IP-CIDR6,2001:b28:f23d::/48,📲 TG北美,no-resolve",
-    "IP-CIDR,91.108.4.0/22,📲 TG欧洲,no-resolve",
-    "IP-CIDR,91.108.8.0/22,📲 TG欧洲,no-resolve",
-    "IP-CIDR,91.108.58.0/23,📲 TG欧洲,no-resolve",
-    "IP-CIDR,149.154.160.0/21,📲 TG欧洲,no-resolve",
-    "IP-CIDR,95.161.76.100/32,📲 TG欧洲,no-resolve",
-    "IP-CIDR,91.105.192.0/23,📲 TG欧洲,no-resolve",
-    "IP-CIDR,185.76.151.0/24,📲 TG欧洲,no-resolve",
-    "IP-CIDR6,2001:67c:4e8::/48,📲 TG欧洲,no-resolve",
-    "IP-CIDR6,2a0a:f280:203::/48,📲 TG欧洲,no-resolve",
     "IP-CIDR,91.108.56.0/22,📲 TG兜底,no-resolve",
     "IP-CIDR,91.108.4.0/22,📲 TG兜底,no-resolve",
     "IP-CIDR,91.108.8.0/22,📲 TG兜底,no-resolve",
@@ -781,7 +746,6 @@
   "telegramFiles": {
     "📲 TG亚太": "Telegram_APAC.list",
     "📲 TG北美": "Telegram_US.list",
-    "📲 TG欧洲": "Telegram_EU.list",
     "📲 TG兜底": "Telegram_Other.list"
   },
   "telegramRevision": "3a8c1c157244ab196e35d42e22d57271303e109d"
