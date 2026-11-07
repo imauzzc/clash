@@ -22,3 +22,9 @@ DOMAIN-SUFFIX,telegram.dog
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,tg.dev
 DOMAIN-SUFFIX,telegram-cdn.org
+
+# MiSub d26abf6f8c43b323d64b4ec29814f7b3a2394a11; 📲 TG欧洲; preserve order and no-resolve.
+IP-CIDR,91.108.58.0/23,no-resolve
+IP-CIDR,149.154.160.0/21,no-resolve
+IP-CIDR,95.161.76.100/32,no-resolve
+IP-CIDR6,2a0a:f280:203::/48,no-resolve
