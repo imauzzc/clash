@@ -116,7 +116,7 @@
       ]
     },
     {
-      "name": "🌸 日本专线",
+      "name": "🌙 私享空间",
       "type": "select",
       "proxies": [
         "🇯🇵 日本节点",
@@ -288,7 +288,7 @@
     "RULE-SET,ADS_CHINA,🎬 视频广告",
     "RULE-SET,AI,🤖 智能 AI",
     "RULE-SET,YOUTUBE,📺 YouTube",
-    "RULE-SET,JAPAN_CUSTOM,🌸 日本专线",
+    "RULE-SET,JAPAN_CUSTOM,🌙 私享空间",
     "RULE-SET,EMBY,🎬 Emby",
     "IP-CIDR,91.108.16.0/22,📲 TG亚太,no-resolve",
     "IP-CIDR,91.108.56.0/23,📲 TG亚太,no-resolve",

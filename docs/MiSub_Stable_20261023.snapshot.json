@@ -237,7 +237,7 @@
       ]
     },
     {
-      "name": "🌸 日本专线",
+      "name": "🌙 私享空间",
       "type": "select",
       "proxies": [
         "🇯🇵 日本节点",
@@ -639,7 +639,7 @@
     "DOMAIN-SUFFIX,groq.com,🤖 智能 AI",
     "DOMAIN-SUFFIX,cohere.com,🤖 智能 AI",
     "RULE-SET,AI,🤖 智能 AI",
-    "RULE-SET,JAPAN_CUSTOM,🌸 日本专线",
+    "RULE-SET,JAPAN_CUSTOM,🌙 私享空间",
     "DOMAIN-SUFFIX,liminalnet.us,🎬 Emby",
     "DOMAIN-SUFFIX,emby.edu.kg,🎬 Emby",
     "DOMAIN-SUFFIX,emby.nexitally.com,🎬 Emby",
