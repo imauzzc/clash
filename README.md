@@ -70,8 +70,8 @@ docs/                            使用说明、分区证据及验证记录
 ## 私享空间自定义分流
 
 三个 INI 入口均新增 `🌙 私享空间` 分组，默认选择 `🇯🇵 日本节点`，其余出口可手动切换。
-规则集中维护于 `rules/Japan_Custom.list`：`phncdn.com`、`pornhub.com`、`chaturbate.com`、`mmcdn.com`、`www.bybit.com`。
-这 5 条规则已从两份 Emby 列表移出；Emby 保留以下 8 条规则。所有条目沿用 `DOMAIN-SUFFIX`，其中 `www.bybit.com` 不覆盖根域 `bybit.com` 或其他同级子域名。
+规则集中维护于 `rules/Japan_Custom.list`，当前仅包含 `pornhub.com`、`chaturbate.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
+Emby 保留以下 8 条规则。
 修改后需重新生成转换结果并更新客户端订阅；客户端保存的分组选择可能覆盖初始默认。
 
 ## Emby 收录与维护

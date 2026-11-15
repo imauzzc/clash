@@ -1,7 +1,4 @@
 # Custom destinations routed through the Japan selector by default.
 # DOMAIN-SUFFIX matches each named domain and its subdomains.
-DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,chaturbate.com
-DOMAIN-SUFFIX,mmcdn.com
-DOMAIN-SUFFIX,www.bybit.com
