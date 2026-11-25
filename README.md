@@ -84,3 +84,9 @@ INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保�
 - [Telegram 分区审计与历史验证](docs/Telegram-routing-audit.md)
 - [Telegram 验证快照](docs/Telegram-validation.json)
 - [Telegram 分区证据](docs/Telegram-evidence-2026-10-16.json)
+
+## 许可
+
+配置模板、规则列表与文档以 [MIT 许可证](LICENSE) 发布，Copyright (c) 2026 imauzzc。
+
+远程引用的第三方规则与列表（ACL4SSR、blackmatrix7 等）版权归各项目所有，遵循其各自条款；本仓库仅以 URL 方式引用，不内置其内容。
