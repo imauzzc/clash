@@ -70,4 +70,4 @@ INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保�
 
 配置模板、规则列表与文档采用 [CC BY-SA 4.0](LICENSE)（署名-相同方式共享 4.0 国际）授权，Copyright (C) 2026 imauzzc。
 
-共享或修改时请保留署名与协议链接，并以相同协议分发。配置模板改编自 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)（同为 CC BY-SA 4.0）；远程引用的第三方规则（blackmatrix7 等）版权归各项目所有。
+共享或修改时请保留署名与协议链接，并以相同协议分发。配置模板改编自 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)（同为 CC BY-SA 4.0）；远程引用的第三方规则与列表版权归各项目所有。
