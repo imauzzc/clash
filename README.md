@@ -24,7 +24,7 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 - `🎬 Emby` 默认选择 `🇺🇲 美国节点`，其余出口可手动切换。
 - `🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。
 - Telegram 根据目标 IP 分为亚太、北美和兜底组。
-- 地区组保留手选节点；进入对应“自动测速”子组后才启用同地区自动选择。没有对应地区节点时保持 REJECT，不跨地区兜底。
+- 地区组保留手选节点；进入对应“自动测速”子组后才启用同地区自动选择。没有对应地区节点时保持 REJECT，不跨地区兜底。欧洲及其他地区节点不单独分组，需在 `🚀 节点选择` 中手动指定。
 - `🌐 DNS 出口` 组专供 `config/dns.yaml` 的 `#🌐 DNS 出口` 引用，不参与普通分流；切换配置时请保留该组，否则 DNS 覆写会因找不到出口组而失效。
 - 该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，DNS 片段见 `config/dns.yaml`。未进入内核的流量不会命中这些分流规则。
 
@@ -38,7 +38,7 @@ rules/Japan_Custom.list             私享空间域名列表
 rules/Telegram_APAC.list            Telegram 亚太目标 IP
 rules/Telegram_US.list              Telegram 北美目标 IP
 rules/Telegram_Other.list           Telegram 兜底 IP 与域名
-docs/                               使用说明、分区证据及验证记录
+docs/                               地区组与 Telegram 分区说明
 ```
 
 主配置引用本仓库的 Emby、私享空间和四份 Telegram 列表，其余远程规则由 ACL4SSR 提供。新增 Emby 服务器只需修改 `rules/Emby.list`，无需改 INI。
@@ -51,20 +51,20 @@ docs/                               使用说明、分区证据及验证记录
 
 ## Telegram 分区
 
-Telegram 根据目标 IP 分为亚太、北美和兜底组，地区判断及实际效果存在边界，详见审计说明。规则集中在 `rules/Telegram_APAC.list`、`rules/Telegram_US.list`、`rules/Telegram_Other.list`。
+Telegram 根据目标 IP 分为亚太、北美和兜底组，规则集中在 `rules/Telegram_APAC.list`、`rules/Telegram_US.list`、`rules/Telegram_Other.list`。
 
 - 分区规则按目标 IP 判断，保留 `no-resolve`。
 - 地区清单必须先于兜底清单和 ACL4SSR 通用列表。
 - 兜底清单同时包含 Telegram 官方 CIDR、少量欧洲专属地址和无法按域名区分数据中心地区的域名。
 
-## 维护与验证
+分区依据、判断边界与维护方式见 [Telegram 分区路由](docs/Telegram-routing.md)。
 
-INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保留顺序，不能用会合并同名键的普通 INI 读写器。
+## 相关文档
+
+INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保留顺序，不能用会合并同名键的普通 INI 读写器。此外，同一列表内不要保留被前面更宽网段覆盖的 CIDR，那类规则永远不会生效。
 
 - [地区节点与自动测速](docs/Region-node-groups.md)
-- [Telegram 分区审计与历史验证](docs/Telegram-routing-audit.md)
-- [Telegram 验证快照](docs/Telegram-validation.json)
-- [Telegram 分区证据](docs/Telegram-evidence-2026-10-16.json)
+- [Telegram 分区路由](docs/Telegram-routing.md)
 
 ## 许可
 
