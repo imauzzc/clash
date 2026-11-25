@@ -25,9 +25,6 @@ DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,tg.dev
 DOMAIN-SUFFIX,telegram-cdn.org
 
-# Telegram EU-only address; reviewed 2026-10-16.
-# Evidence and limits: ../docs/Telegram-routing-audit.md
-# The former EU strategy group was removed, so this single EU-only address falls to the fallback group.
-# Dropped 91.108.58.0/23, 149.154.160.0/21 and 2a0a:f280:203::/48: already covered by
-# the broader 91.108.56.0/22, 149.154.160.0/20 and 2a0a:f280::/32 ranges above, so they could never match.
+# EU-only address; with no separate EU group it falls to this fallback group.
+# Evidence and limits: ../docs/Telegram-routing.md
 IP-CIDR,95.161.76.100/32,no-resolve
