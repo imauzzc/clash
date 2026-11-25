@@ -1,30 +1,8 @@
 # Clash 订阅转换规则
 
-## 精简版（欧洲合并 + MetaCubeX AI）
-
-新增 [精简版说明](docs/MiSub_Compact_20261023.md)：保留五个地区及其他节点，欧洲只有一个组，AI 使用 MetaCubeX 六项服务清单。暂定加入 MetaCubeX YouTube 清单和独立出口；原稳定版保留回退。
-
-入口：https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Compact_20261023.ini
-
-已通过配置和规则源加载校验，切换后仍需实际测试 Google Play 和 AI；没有自动切换网站设置。
-
-## 当前已验证内置方案的备用模板
-
-新增 [MiSub 稳定版备用配置](docs/MiSub_Stable_20261023.md)，以 2026-10-23 已确认可用的内置 Standard 为准：保留原 Google、DNS 和兜底逻辑，只含 Emby、统一 AI、Telegram 分区及三份广告清单。
-
-备用 URL：
-
-```text
-https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Stable_20261023.ini
-```
-
-配套提供 [DNS 片段](config/MiSub_Stable_20261023.dns.yaml)、完整分流快照、独立本地生成工具和配置比较记录。切换后仍需实际测试，INI 的隐藏组和地区识别限制见说明。当前网站的内置方案没有自动切换。
-
-下面保留的是早期 INI 的说明，不能把它的 Google/Play 等复杂规则当作稳定版配置。
-
----
-
 维护供 MiSub / Subconverter 使用的自定义 INI，集中管理业务分流、地区节点和 Telegram 目标 IP 分区。
+
+仓库只保留一套配置，不再维护“精简版 / 稳定版”等派生模板；所有文件名不含日期。
 
 ## 配置入口
 
@@ -34,45 +12,36 @@ https://raw.githubusercontent.com/imauzzc/clash/main/config/MiSub_Stable_2026102
 https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Custom.ini
 ```
 
-INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 配置；不能直接当成节点订阅导入。转换时保持 `sort=false`。
+INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 配置，不能直接当成节点订阅导入。转换时保持 `sort=false`。
 
-更新本仓库后，先刷新转换结果，再在客户端更新订阅。若仍显示旧配置，清理转换缓存或给 INI 地址添加版本参数（例如 `?v=20261016-emby`）。
+更新本仓库后，先刷新转换结果，再在客户端更新订阅。若仍显示旧配置，清理转换缓存或给 INI 地址添加版本参数（例如 `?v=20261125`）。
 
 ## 当前策略
 
-- 共 27 个策略组，包含节点选择、自动选择、五个地区手选组及各自的自动测速组。
+- 共 26 个策略组：节点选择、自动选择、DNS 出口、五个地区手选组及各自的自动测速组，外加 AI、YouTube、谷歌、微软、苹果、私享空间、Emby、全球直连、全球拦截、漏网之鱼和三个 Telegram 分区组。
 - AI、YouTube、谷歌、微软、苹果分别分流；微软和苹果默认直连。
 - Play、Google CN 和 FCM 共用 `📢 谷歌`，不设置独立的 Play 或 Google CN 组；保留 Play 接口、下载域名和 GoogleCNProxyIP 覆盖。
-- 更新后须重新生成 MiSub / Subconverter 结果，再更新 OpenClash 订阅；必要时为外部 INI URL 添加版本参数以避开缓存。该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，未进入内核的流量不会命中这些分流规则。
-- `🎬 Emby` 引用本仓库 `rules/Emby_Custom_20261023.list`，覆盖收录的服务器域名及其子域名，默认选择 `🇺🇸 美国节点`。可选项与苹果服务一致：日本、直连、节点选择、自动选择、香港、台湾、新加坡、美国、欧洲。
-- Emby 规则位于局域网规则之后、其他远程列表之前，避免被后续通用规则提前匹配。
-- Telegram 根据目标 IP 分为亚太、北美、欧洲和兜底组；地区判断及实际效果存在边界，见审计说明。
-- 地区组保留手选节点；进入对应“自动测速”子组后才启用同地区自动选择。Emby 默认选美国地区组，不自动切到日本自动测速；需要时在日本组内主动选择。没有日本节点时拒绝连接，不跨地区兜底。
-
-客户端之前保存的策略组选择可能覆盖新的初始默认；更新后请确认 Emby 选择了美国节点。
+- `🎬 Emby` 默认选择 `🇺🇲 美国节点`，其余出口可手动切换。
+- `🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。
+- Telegram 根据目标 IP 分为亚太、北美和兜底组。
+- 地区组保留手选节点；进入对应“自动测速”子组后才启用同地区自动选择。没有对应地区节点时保持 REJECT，不跨地区兜底。
+- `🌐 DNS 出口` 组专供 `config/dns.yaml` 的 `#🌐 DNS 出口` 引用，不参与普通分流；切换配置时请保留该组，否则 DNS 覆写会因找不到出口组而失效。
+- 该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，DNS 片段见 `config/dns.yaml`。未进入内核的流量不会命中这些分流规则。
 
 ## 文件结构
 
 ```text
-config/ACL4SSR_Mini_AI_Custom.ini  主配置，维护 ruleset 和 custom_proxy_group
-rules/Emby_Custom_20261023.list                   Emby 服务器域名精选列表
-rules/Telegram_APAC.list          Telegram 亚太目标 IP
-rules/Telegram_US.list            Telegram 北美目标 IP
-rules/Telegram_EU.list            Telegram 欧洲目标 IP
-rules/Telegram_Other.list         Telegram 广域网段及域名兜底
-docs/                            使用说明、分区证据及验证记录
+config/ACL4SSR_Mini_AI_Custom.ini   唯一配置，维护 ruleset 和 custom_proxy_group
+config/dns.yaml                     DNS 片段（OpenClash / MiSub DNS 覆写）
+rules/Emby.list                     Emby 服务器域名列表
+rules/Japan_Custom.list             私享空间域名列表
+rules/Telegram_APAC.list            Telegram 亚太目标 IP
+rules/Telegram_US.list              Telegram 北美目标 IP
+rules/Telegram_Other.list           Telegram 兜底 IP 与域名
+docs/                               使用说明、分区证据及验证记录
 ```
 
-主配置引用本仓库的一份 Emby 列表和四份 Telegram 列表，其余远程规则由 ACL4SSR 提供。Emby 服务器地址统一在 `rules/Emby_Custom_20261023.list` 维护，新增服务器不需要修改 INI。
-
-2026-10-16 清理了旧版 Full / LIAN / mini 模板、根目录四份旧列表、开发脚本和两份路由器设置示例；历史版本仍可从 Git 提交记录查看。使用过旧文件地址的客户端需要改用上述配置入口。
-
-## 私享空间自定义分流
-
-三个 INI 入口均新增 `🌙 私享空间` 分组，默认选择 `🇯🇵 日本节点`，其余出口可手动切换。
-规则集中维护于 `rules/Japan_Custom.list`，当前仅包含 `pornhub.com`、`chaturbate.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
-Emby 保留以下 8 条规则。
-修改后需重新生成转换结果并更新客户端订阅；客户端保存的分组选择可能覆盖初始默认。
+主配置引用本仓库的 Emby、私享空间和四份 Telegram 列表，其余远程规则由 ACL4SSR 提供。新增 Emby 服务器只需修改 `rules/Emby.list`，无需改 INI。
 
 ## Emby 收录与维护
 
@@ -93,7 +62,19 @@ Emby 保留以下 8 条规则。
 
 列表只使用明确的服务器域名，不包含通用的 `DOMAIN-KEYWORD,emby`、整个客户端进程规则、服务商主站域名或共享 IP 段。后续优先补充实际使用且已核对的地址；播放跳转到其他域名时，需要根据客户端连接记录补充实际媒体地址，不能把整个 CDN 或网盘域名都归入 Emby。
 
-本次将原 `🌐 LiminalNet` 组更名为 `🎬 Emby`，不额外增加策略组；组内选项与默认美国选择保持原样。更新后请在新组中确认出口选择；其他 Emby 服务的最佳出口需按实际播放情况手动选择。
+## 私享空间
+
+`🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。规则集中维护于 `rules/Japan_Custom.list`，当前包含 `pornhub.com`、`chaturbate.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
+
+修改后需重新生成转换结果并更新客户端订阅；客户端保存的分组选择可能覆盖初始默认。
+
+## Telegram 分区
+
+Telegram 根据目标 IP 分为亚太、北美和兜底组，地区判断及实际效果存在边界，详见审计说明。规则集中在 `rules/Telegram_APAC.list`、`rules/Telegram_US.list`、`rules/Telegram_Other.list`。
+
+- 分区规则按目标 IP 判断，保留 `no-resolve`。
+- 地区清单必须先于兜底清单和 ACL4SSR 通用列表。
+- 兜底清单同时包含 Telegram 官方 CIDR、少量欧洲专属地址和无法按域名区分数据中心地区的域名。
 
 ## 维护与验证
 
@@ -103,5 +84,3 @@ INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保�
 - [Telegram 分区审计与历史验证](docs/Telegram-routing-audit.md)
 - [Telegram 验证快照](docs/Telegram-validation.json)
 - [Telegram 分区证据](docs/Telegram-evidence-2026-10-16.json)
-
-Telegram 验证 JSON 保留加入 LiminalNet 前的 26 组历史快照；LiminalNet 后续更名为 Emby，移除独立 Google Play 和 Google CN 组后当前为 27 组。此次修改的验证结果见审计说明末尾。
