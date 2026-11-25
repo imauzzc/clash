@@ -43,25 +43,6 @@ docs/                               使用说明、分区证据及验证记录
 
 主配置引用本仓库的 Emby、私享空间和四份 Telegram 列表，其余远程规则由 ACL4SSR 提供。新增 Emby 服务器只需修改 `rules/Emby.list`，无需改 INI。
 
-## Emby 收录与维护
-
-当前共 8 条域名后缀规则：
-
-| 来源 / 服务 | 域名 |
-|---|---|
-| 用户提供 | `liminalnet.us` |
-| 用户提供 | `emby.edu.kg` |
-| Nexitally | `emby.nexitally.com` |
-| FlowerCloud | `emby.flowercloud.yt` |
-| YToo | `emby.ytoo.li` |
-| Nyancat | `emby.nyancat.net` |
-| PrprCloud | `emby.prprcloud.com` |
-| Emby 社区服务器域名 | `emby.wtf` |
-
-公开域名选自 [blackmatrix7 Emby 规则](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Emby/Emby.list)，核对日期为 2026-10-16；上游文件标注的更新时间是 2025-06-06。收录仅表示用于分流的地址参考，不代表确认服务仍在运营、可登录或开放注册。
-
-列表只使用明确的服务器域名，不包含通用的 `DOMAIN-KEYWORD,emby`、整个客户端进程规则、服务商主站域名或共享 IP 段。后续优先补充实际使用且已核对的地址；播放跳转到其他域名时，需要根据客户端连接记录补充实际媒体地址，不能把整个 CDN 或网盘域名都归入 Emby。
-
 ## 私享空间
 
 `🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。规则集中维护于 `rules/Japan_Custom.list`，当前包含 `pornhub.com`、`chaturbate.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
