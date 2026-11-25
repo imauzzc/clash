@@ -1,21 +1,21 @@
-MIT License
+Clash 订阅转换规则
+Copyright (C) 2026 imauzzc
 
-Copyright (c) 2026 imauzzc
+本仓库的配置模板、规则列表与文档采用
+知识共享 署名-相同方式共享 4.0 国际许可协议（CC BY-SA 4.0）授权。
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+许可全文：https://creativecommons.org/licenses/by-sa/4.0/legalcode.zh-hans
+协议摘要：https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+你可以自由地共享（以任何媒介或格式复制、发行本作品）和演绎
+（修改、转换或以本作品为基础进行创作），包括商业目的，但需遵守：
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- 署名：注明原作者、提供协议链接，并说明是否作出修改；
+- 相同方式共享：若对本作品进行修改或以它为基础创作，分发时
+  必须采用相同的许可协议，不得改用 MIT 等其他协议。
+
+本配置模板改编自 ACL4SSR（https://github.com/ACL4SSR/ACL4SSR），
+该项目同样以 CC BY-SA 4.0 发布。远程引用的第三方规则与列表版权归
+各自项目所有，遵循其各自条款。
+
+本作品按“现状”提供，不附带任何形式的担保。
