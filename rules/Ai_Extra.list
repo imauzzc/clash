@@ -12,12 +12,6 @@ DOMAIN-KEYWORD,antigravity
 
 # Google sign-in, so Antigravity auth exits through the same group as model calls.
 DOMAIN-SUFFIX,accounts.google.com
-DOMAIN-SUFFIX,oauth2.googleapis.com
 
-# Google telemetry beacons (redundant with the suffix below, kept for clarity).
-DOMAIN-SUFFIX,play.googleapis.com
-DOMAIN-SUFFIX,firebaselogging-pa.googleapis.com
-DOMAIN-SUFFIX,clearcut-pa.googleapis.com
-
-# Broad Google API surface: model gateways (cloudcode-pa), Vertex-style APIs, etc.
+# Broad Google API surface: model gateways (cloudcode-pa), telemetry beacons, etc.
 DOMAIN-SUFFIX,googleapis.com
