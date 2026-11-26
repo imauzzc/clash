@@ -43,7 +43,7 @@ docs/                               地区组与 Telegram 分区说明
 
 ## 私享空间
 
-`🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。规则集中维护于 `rules/Japan_Custom.list`，当前包含 `pornhub.com`、`chaturbate.com` 及其 CDN 域名 `phncdn.com`、`mmcdn.com`、`highwebmedia.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
+`🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。规则集中维护于 `rules/Japan_Custom.list`，当前包含 `pornhub.com`、`pornhubpremium.com`、`chaturbate.com` 及其 CDN 域名 `phncdn.com`、`phprcdn.com`、`mmcdn.com`、`highwebmedia.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
 
 修改后需重新生成转换结果并更新客户端订阅；客户端保存的分组选择可能覆盖初始默认。
 
