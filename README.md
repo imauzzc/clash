@@ -32,7 +32,7 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 config/ACL4SSR_Mini_AI_Custom.ini   唯一配置，维护 ruleset 和 custom_proxy_group
 config/dns.yaml                     DNS 片段（OpenClash / MiSub DNS 覆写）
 rules/Emby.list                     Emby 服务器域名列表
-rules/Japan_Custom.list             私享空间域名列表
+rules/Private_Space.list            私享空间域名列表
 rules/Telegram_APAC.list            Telegram 亚太目标 IP
 rules/Telegram_US.list              Telegram 北美目标 IP
 rules/Telegram_Other.list           Telegram 兜底 IP 与域名
@@ -43,7 +43,7 @@ docs/                               地区组与 Telegram 分区说明
 
 ## 私享空间
 
-`🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。规则集中维护于 `rules/Japan_Custom.list`，当前包含 `pornhub.com`、`pornhubpremium.com`、`chaturbate.com` 及其 CDN 域名 `phncdn.com`、`phprcdn.com`、`mmcdn.com`、`highwebmedia.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
+`🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。规则集中维护于 `rules/Private_Space.list`，当前包含 `pornhub.com`、`pornhubpremium.com`、`chaturbate.com` 及其 CDN 域名 `phncdn.com`、`phprcdn.com`、`mmcdn.com`、`highwebmedia.com`，均使用 `DOMAIN-SUFFIX` 匹配域名及其子域名。
 
 修改后需重新生成转换结果并更新客户端订阅；客户端保存的分组选择可能覆盖初始默认。
 
