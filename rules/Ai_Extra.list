@@ -1,0 +1,9 @@
+# AI platform destinations not covered by ACL4SSR AI.list.
+# Referenced from config/Home_Routing_v2.ini, placed before YouTube.list.
+# DOMAIN-SUFFIX matches each named domain and its subdomains.
+# googleapis.com must stay ahead of ProxyLite.list, which also lists it.
+
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,googleapis.com
