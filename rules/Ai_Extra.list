@@ -5,6 +5,7 @@
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
+DOMAIN-KEYWORD,gemini
 
 # Google Antigravity: site, IDE/CLI hosts and the auto-updater on run.app.
 DOMAIN-SUFFIX,antigravity.google
