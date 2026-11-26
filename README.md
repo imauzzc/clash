@@ -7,7 +7,7 @@
 在 MiSub 的「设置 → 服务集成 → 规则与配置方案」中填写：
 
 ```text
-https://raw.githubusercontent.com/imauzzc/clash/main/config/Home_Routing_v2.ini
+https://raw.githubusercontent.com/imauzzc/clash/main/config/Home_Routing_v3.ini
 ```
 
 这是转换模板，需配合节点订阅生成 Clash / Mihomo 配置，不能直接当成节点订阅导入。转换时保持 `sort=false`。
@@ -24,8 +24,8 @@ DNS 由 MiSub 内置生成器或「设置 → 服务集成 → DNS 覆写」管�
 ## 文件
 
 ```text
-config/Home_Routing_v2.ini   主配置
-rules/Ai_Extra.list          AI 平台补充域名（反重力、遥测等）
+config/Home_Routing_v3.ini   主配置
+rules/Ai_Extra.list          AI 平台补充域名（Gemini、Google API）
 rules/                       Emby、私享空间、Telegram 分区列表
 docs/                        地区组与 Telegram 分区说明
 ```

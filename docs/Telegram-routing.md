@@ -2,7 +2,7 @@
 
 Telegram 按**目标 IP** 分流。同一账号的消息、媒体、通话会连到不同数据中心，域名也看不出机房位置，所以这里只用 IP 归类。
 
-规则分三份，均在 `config/Home_Routing_v2.ini` 中引用，位置在局域网直连之后、Play / UnBan / 广告 / AI / Google / Proxy / China / GeoIP 之前。
+规则分三份，均在 `config/Home_Routing_v3.ini` 中引用，位置在局域网直连之后、Play / UnBan / 广告 / AI / Google / Proxy / China / GeoIP 之前。
 
 | 规则文件 | 策略组 | 默认出口 |
 |---|---|---|
