@@ -23,14 +23,13 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 - `🌙 私享空间` 默认选择 `🇯🇵 日本节点`，其余出口可手动切换。
 - Telegram 根据目标 IP 分为亚太、北美和兜底组。
 - 地区组保留手选节点；进入对应“自动测速”子组后才启用同地区自动选择。没有对应地区节点时保持 REJECT，不跨地区兜底。欧洲及其他地区节点不单独分组，需在 `🚀 节点选择` 中手动指定。
-- `🌐 DNS 出口` 组专供 `config/dns.yaml` 的 `#🌐 DNS 出口` 引用，不参与普通分流；切换配置时请保留该组，否则 DNS 覆写会因找不到出口组而失效。
-- 该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过，DNS 片段见 `config/dns.yaml`。未进入内核的流量不会命中这些分流规则。
+- `🌐 DNS 出口` 组专供 MiSub 生成 DNS 时的 `#🌐 DNS 出口` 引用，不参与普通分流；切换配置时请保留该组，否则 DNS 出口会因找不到策略组而失效。
+- 该 INI 不控制 OpenClash 的 DNS、Fake-IP 或防火墙国内 IP 绕过；DNS 由 MiSub 内置生成器或面板 `设置 → 服务集成 → DNS 覆写` 管理。未进入内核的流量不会命中这些分流规则。
 
 ## 文件结构
 
 ```text
 config/Home_Routing.ini             唯一配置，维护 ruleset 和 custom_proxy_group
-config/dns.yaml                     DNS 片段（OpenClash / MiSub DNS 覆写）
 rules/Emby.list                     Emby 服务器域名列表
 rules/Private_Space.list            私享空间域名列表
 rules/Telegram_APAC.list            Telegram 亚太目标 IP
@@ -68,4 +67,4 @@ INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保�
 
 配置模板、规则列表与文档采用 CC BY-SA 4.0（署名-相同方式共享 4.0 国际）授权，Copyright (C) 2026 imauzzc。
 
-共享或修改时请保留署名与协议链接，并以相同协议分发。配置模板改编自 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)（同为 CC BY-SA 4.0）；远程引用的第三方规则与列表版权归各项目所有。
+共享或修改时请保留署名与协议链接，并以相同协议分发。配置模板改编自 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)（同 CC BY-SA 4.0）；远程引用的第三方规则与列表版权归各项目所有。
