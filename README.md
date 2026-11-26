@@ -7,7 +7,7 @@
 在订阅转换工具的“外部配置 / 自定义配置”中填写：
 
 ```text
-https://raw.githubusercontent.com/imauzzc/clash/main/config/ACL4SSR_Mini_AI_Custom.ini
+https://raw.githubusercontent.com/imauzzc/clash/main/config/Home_Routing.ini
 ```
 
 INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 配置，不能直接当成节点订阅导入。转换时保持 `sort=false`。
@@ -29,7 +29,7 @@ INI 是转换模板，需要配合你自己的节点订阅生成 Clash / Mihomo 
 ## 文件结构
 
 ```text
-config/ACL4SSR_Mini_AI_Custom.ini   唯一配置，维护 ruleset 和 custom_proxy_group
+config/Home_Routing.ini             唯一配置，维护 ruleset 和 custom_proxy_group
 config/dns.yaml                     DNS 片段（OpenClash / MiSub DNS 覆写）
 rules/Emby.list                     Emby 服务器域名列表
 rules/Private_Space.list            私享空间域名列表
@@ -66,6 +66,6 @@ INI 使用重复的 `ruleset=` 和 `custom_proxy_group=` 行，编辑时须保�
 
 ## 许可
 
-配置模板、规则列表与文档采用 [CC BY-SA 4.0](LICENSE)（署名-相同方式共享 4.0 国际）授权，Copyright (C) 2026 imauzzc。
+配置模板、规则列表与文档采用 CC BY-SA 4.0（署名-相同方式共享 4.0 国际）授权，Copyright (C) 2026 imauzzc。
 
 共享或修改时请保留署名与协议链接，并以相同协议分发。配置模板改编自 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)（同为 CC BY-SA 4.0）；远程引用的第三方规则与列表版权归各项目所有。
