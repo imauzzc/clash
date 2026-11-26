@@ -2,6 +2,8 @@
 # DOMAIN-SUFFIX matches each named domain and its subdomains.
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-SUFFIX,mmcdn.com
 DOMAIN-SUFFIX,highwebmedia.com
+DOMAIN-SUFFIX,pornhubpremium.com
