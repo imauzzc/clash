@@ -13,5 +13,8 @@ DOMAIN-KEYWORD,antigravity
 # Google sign-in, so Antigravity auth exits through the same group as model calls.
 DOMAIN-SUFFIX,accounts.google.com
 
+# Google certificate validation; polluted DNS otherwise matches GEOIP,CN and times out.
+DOMAIN-SUFFIX,pki.goog
+
 # Broad Google API surface: model gateways (cloudcode-pa), telemetry beacons, etc.
 DOMAIN-SUFFIX,googleapis.com
