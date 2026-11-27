@@ -3,3 +3,5 @@
 
 DOMAIN-KEYWORD,gemini
 DOMAIN-SUFFIX,googleapis.com
+# Google certificate validation; polluted DNS otherwise matches GEOIP,CN and times out.
+DOMAIN-SUFFIX,pki.goog
